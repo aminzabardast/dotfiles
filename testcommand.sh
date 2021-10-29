@@ -14,7 +14,7 @@ cp /usr/share/doc/bspwm/examples/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
 
 # Setting up wallpaper
 echo "#!/bin/sh
-feh --no-fehbg --bg-fill $HOME/.dotfiles/wallpaper.png" > "$HOME/.fehbg"
+feh --no-fehbg --bg-max $HOME/.dotfiles/wallpaper.png" > "$HOME/.fehbg"
 chmod +x "$HOME/.fehbg"
 
 # Setting up .xinit
