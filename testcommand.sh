@@ -7,13 +7,13 @@ pacman --noconfirm -S xorg xorg-xinit arandr bspwm sxhkd dmenu feh picom firefox
 
 # Setting Up BSPWM
 echo "Setting up BSPWM ..."
-mkdir ~/.config
-mkdir ~/.config/bspwm
-mkdir ~/.config/sxhkd
-cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
-cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
+mkdir $HOME/.config
+mkdir $HOME/.config/bspwm
+mkdir $HOME/.config/sxhkd
+cp /usr/share/doc/bspwm/examples/bspwmrc $HOME/.config/bspwm/bspwmrc
+cp /usr/share/doc/bspwm/examples/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
 
 # Setting up .xinit
 echo "Setting up .xinitrc ..."
-curl -o ~/.xinitrc -L aminzabardast.github.io/dotfiles/xinitrc
-echo "setxkbmap us &\npicom -f &\nexec bspwm" >> ~/.xinitrc
+curl -o $HOME/.xinitrc -L aminzabardast.github.io/dotfiles/xinitrc
+echo "setxkbmap us &\npicom -f &\nexec bspwm" >> $HOME/.xinitrc
