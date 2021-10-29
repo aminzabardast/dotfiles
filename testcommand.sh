@@ -17,6 +17,7 @@ echo "Setting up .xinitrc ..."
 cp xinitrc $HOME/.xinitrc
 echo "
 setxkbmap us &
+xsetroot -cursor_name left_ptr
 picom -f &
 exec bspwm
 " >> $HOME/.xinitrc
