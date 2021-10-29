@@ -1,6 +1,5 @@
 #!/bin/sh
 echo "Updating Packages ..."
-sudo su
 pacman --noconfirm -Suy
 echo "Installing Necessary Packages ..."
 pacman --noconfirm -S xorg xorg-xinit arandr bspwm sxhkd dmenu feh picom firefox rxvt-unicode openssh
