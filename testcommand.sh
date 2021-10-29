@@ -12,11 +12,15 @@ mkdir $HOME/.config/sxhkd
 cp /usr/share/doc/bspwm/examples/bspwmrc $HOME/.config/bspwm/bspwmrc
 cp /usr/share/doc/bspwm/examples/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
 
+# Setting up wallpaper
+feh --bg-scale $HOME/.dotfiles/wallpaper.png
+
 # Setting up .xinit
 echo "Setting up .xinitrc ..."
 cp xinitrc $HOME/.xinitrc
 echo "
 setxkbmap us &
+$HOME/.fehbg &
 xsetroot -cursor_name left_ptr
 picom -f &
 exec bspwm
