@@ -13,7 +13,9 @@ cp /usr/share/doc/bspwm/examples/bspwmrc $HOME/.config/bspwm/bspwmrc
 cp /usr/share/doc/bspwm/examples/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
 
 # Setting up wallpaper
-echo "feh --bg-fill $HOME/.dotfiles/wallpaper.png" > "$HOME/.fehbg"
+echo "#!/bin/sh
+feh --no-fehbg --bg-fill $HOME/.dotfiles/wallpaper.png" > "$HOME/.fehbg"
+chmod +x "$HOME/.fehbg"
 
 # Setting up .xinit
 echo "Setting up .xinitrc ..."
