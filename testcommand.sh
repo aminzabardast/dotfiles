@@ -15,4 +15,8 @@ cp /usr/share/doc/bspwm/examples/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
 # Setting up .xinit
 echo "Setting up .xinitrc ..."
 cp xinitrc $HOME/.xinitrc
-echo "setxkbmap us &\npicom -f &\nexec bspwm" >> $HOME/.xinitrc
+echo "
+setxkbmap us &
+picom -f &
+exec bspwm
+" >> $HOME/.xinitrc
