@@ -1,9 +1,9 @@
 #!/bin/sh
 echo "Updating Packages ..."
 sudo su
-pacman -Suy --noconfirm
+pacman --noconfirm -Suy
 #echo "Installing Necessary Packages ..."
-#pacman -S --noconfirm xorg xorg-xinit arandr bspwm sxhkd dmenu feh picom firefox rxvt-unicode
+#pacman --noconfirm -S xorg xorg-xinit arandr bspwm sxhkd dmenu feh picom firefox rxvt-unicode
 exit
 
 # Setting Up BSPWM
