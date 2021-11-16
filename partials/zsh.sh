@@ -5,6 +5,4 @@ echo "Installing ZSH ..."
 sudo pacman --noconfirm --needed -S zsh
 echo "Setting ZSH as default ..."
 chsh -s $(which zsh)
-echo "Creating the Default '.zshrc' ..."
-echo "" > "$HOME/.zshrc"
-
+curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
