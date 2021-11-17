@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Update
-sh partials/update_or_upgrade.sh
+sh partials/update_and_upgrade.sh
 # Install ZSH
 sh partials/zsh.sh
 # Install Tmux
