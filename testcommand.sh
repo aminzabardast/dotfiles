@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# Install ZSH
-sh "$PWD/partials/zsh.sh"
 # Update
 sh "$PWD/partials/update_and_upgrade.sh"
+# Install ZSH
+sh "$PWD/partials/zsh.sh"
 # Install Tmux
 sh "$PWD/partials/tmux.sh"
 # Install fzf
