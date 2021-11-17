@@ -5,5 +5,5 @@ cecho(){
     # ... ADD MORE COLORS
     NC="\033[0m" # No Color
 
-    printf "${!1}${2} ${NC}\n"
+    printf "${!1}<><><><><><| ${2} ${NC}\n"
 }

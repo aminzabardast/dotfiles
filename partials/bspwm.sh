@@ -2,7 +2,7 @@
 
 source "$PWD/utils.sh"
 
-cecho "RED" "<><><> Setting up BSPWM ..."
+cecho "RED" "Setting up BSPWM ..."
 mkdir $HOME/.config
 mkdir $HOME/.config/bspwm
 mkdir $HOME/.config/sxhkd
@@ -15,7 +15,7 @@ feh --no-fehbg --bg-fill $HOME/.dotfiles/wallpaper.png" > "$HOME/.fehbg"
 chmod +x "$HOME/.fehbg"
 
 # Setting up .xinit
-cecho "RED" "<><><> Setting up .xinitrc ..."
+cecho "RED" "Setting up .xinitrc ..."
 cp xinitrc $HOME/.xinitrc
 echo "
 setxkbmap us &
