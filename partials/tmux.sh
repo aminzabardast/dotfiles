@@ -1,5 +1,7 @@
 #!/bin/sh
 
-echo "Installing Tmux ..."
+source "$PWD/utils.sh"
+
+cecho "RED" "<><><> Installing Tmux ..."
 sudo pacman --noconfirm --needed -S tmux
 

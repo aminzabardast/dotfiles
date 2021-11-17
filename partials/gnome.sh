@@ -1,8 +1,9 @@
 #!/bin/sh
 
-# Installing Gnome
-echo "Setting up Gnome ..."
+source "$PWD/utils.sh"
+
+cecho "RED" "<><><> Setting up Gnome ..."
 sudo pacman --noconfirm --needed -S gnome gnome-extra
 
-echo "Enabling GDM ..."
+cecho "RED" "<><><> Enabling GDM ..."
 sudo systemctl enable gdm

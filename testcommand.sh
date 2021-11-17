@@ -1,12 +1,12 @@
 #!/bin/sh
 
 # Update
-sh partials/update_and_upgrade.sh
+sh "$PWD/partials/update_and_upgrade.sh"
 # Install ZSH
-sh partials/zsh.sh
+sh "$PWD/partials/zsh.sh"
 # Install Tmux
-sh partials/tmux.sh
+sh "$PWD/partials/tmux.sh"
 # Install fzf
-sh partials/fzf.sh
+sh "$PWD/partials/fzf.sh"
 # gnome or bspwm
-sh partials/gnome.sh
+sh "$PWD/partials/gnome.sh"
