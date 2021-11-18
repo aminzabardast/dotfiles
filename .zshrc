@@ -8,4 +8,5 @@ plugins=(
 )
 export EDITOR=vim
 source $ZSH/oh-my-zsh.sh
+source $HOME/.profile
 source $HOME/.personal
