@@ -10,3 +10,5 @@ sh "$PWD/partials/tmux.sh"
 sh "$PWD/partials/fzf.sh"
 # gnome or bspwm
 sh "$PWD/partials/gnome.sh"
+# yt-dlp
+sh "$PWD/partials/ytdl.sh"

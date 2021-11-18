@@ -1,0 +1,16 @@
+# KanSil Server Stuff
+alias kansil="ssh -p 8086 amin@kansil"
+alias kansil-ports="ssh -p 8086 -L 8888:127.0.0.1:8888 -L 6006:127.0.0.1:6006 amin@kansil"
+alias kansil-sshfs="sshfs -p 8086 amin@kansil:/home/amin ~/Mounts/KanSil"
+alias kansil-socks5="ssh -p 8086 -D 2314 amin@kansil"
+# Ehsan's BTH Public Server
+alias ehsan-bth="ssh ehz@diptsrv003.bth.se"
+alias ehsan-bth-ports="ssh -L 8888:127.0.0.1:8888 -L 6006:127.0.0.1:6006 ehz@diptsrv003.bth.se"
+alias ehsan-bth-sshfs="sshfs ehz@diptsrv003.bth.se:/home/ehz ~/Mounts/Ehsan"
+alias ehsan-bth-sshfs-8tb="sshfs ehz@diptsrv003.bth.se:/mnt/8tb_hdd/users/ehz ~/Mounts/Ehsan8tb"
+# List Stuff
+alias l='ls -F'
+alias la='ls -aF'
+alias ll='ls -rtlaFsh'
+# Open in Window Manager / Gnome
+alias open="xdg-open"
