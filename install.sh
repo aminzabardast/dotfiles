@@ -12,5 +12,7 @@ sh "$PWD/partials/fzf.sh"
 sh "$PWD/partials/ytdl.sh"
 # Install NVM
 sh "$PWD/partials/nvm.sh"
+# Install NVM
+sh "$PWD/partials/pyenv.sh"
 # Install Gnome
 sh "$PWD/partials/gnome.sh"
