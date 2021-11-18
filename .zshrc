@@ -1,6 +1,5 @@
 export ZSH="/home/amin/.oh-my-zsh"
 ZSH_THEME="dstufft"
-e off. _ and - will be interchangeable.
 DISABLE_MAGIC_FUNCTIONS="true"
 plugins=(
   git

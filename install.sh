@@ -8,7 +8,7 @@ sh "$PWD/partials/zsh.sh"
 sh "$PWD/partials/tmux.sh"
 # Install fzf
 sh "$PWD/partials/fzf.sh"
-# gnome or bspwm
-sh "$PWD/partials/gnome.sh"
-# yt-dlp
+# Install yt-dlp
 sh "$PWD/partials/ytdl.sh"
+# Install Gnome
+sh "$PWD/partials/gnome.sh"
