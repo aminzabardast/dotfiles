@@ -10,5 +10,7 @@ sh "$PWD/partials/tmux.sh"
 sh "$PWD/partials/fzf.sh"
 # Install yt-dlp
 sh "$PWD/partials/ytdl.sh"
+# Install NVM
+sh "$PWD/partials/nvm.sh"
 # Install Gnome
 sh "$PWD/partials/gnome.sh"
