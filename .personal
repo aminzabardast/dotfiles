@@ -14,3 +14,12 @@ alias la='ls -aF'
 alias ll='ls -rtlaFsh'
 # Open in Window Manager / Gnome
 alias open="xdg-open"
+# Pyenv Stuff
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+alias pa='pyenv activate'
+alias pd='pyenv deactivate'
+alias pv='pyenv versions'
