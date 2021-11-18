@@ -8,4 +8,5 @@ cecho "RED" "Setting ZSH as default ..."
 chsh -s "$(which zsh)"
 curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
 cp "$PWD/.zshrc" "$HOME/.zshrc"
+cp "$PWD/.profile" "$HOME/.profile"
 cp "$PWD/.personal" "$HOME/.personal"
