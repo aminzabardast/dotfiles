@@ -14,9 +14,9 @@ sh "$PWD/partials/ytdl.sh"
 sh "$PWD/partials/nvm.sh"
 # Install NVM
 sh "$PWD/partials/pyenv.sh"
-# Install Gnome
-sh "$PWD/partials/gnome.sh"
 # Install Disk Utils
 sh "$PWD/partials/disk_utils.sh"
 # Install Docker
 sh "$PWD/partials/docker.sh"
+# Install Gnome
+sh "$PWD/partials/gnome.sh"
