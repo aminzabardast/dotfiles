@@ -23,6 +23,8 @@ sh "$PWD/partials/albert.sh"
 # Install Flameshot
 sh "$PWD/partials/flameshot.sh"
 # Install FDM
-#sh "$PWD/partials/fdm.sh"
+sh "$PWD/partials/fdm.sh"
 # Install Gnome
 sh "$PWD/partials/gnome.sh"
+# Theme Installation
+# Icons Installation
