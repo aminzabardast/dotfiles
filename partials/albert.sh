@@ -6,4 +6,5 @@ cecho "RED" "Installing Albert ..."
 sudo git clone https://aur.archlinux.org/albert.git /opt/albert
 sudo chown -R $USER:$USER /opt/albert
 cd /opt/albert
-makepkg -si
+makepkg --noconfirm --needed -si
+cp "config/albert" "$HOME/.config/albert"
