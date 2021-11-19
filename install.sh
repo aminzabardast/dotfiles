@@ -19,6 +19,6 @@ sh "$PWD/partials/disk_utils.sh"
 # Install Docker
 sh "$PWD/partials/docker.sh"
 # Install Albert
-#sh "$PWD/partials/albert.sh"
+sh "$PWD/partials/albert.sh"
 # Install Gnome
 sh "$PWD/partials/gnome.sh"
