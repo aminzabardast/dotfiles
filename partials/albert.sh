@@ -8,6 +8,8 @@ sudo chown -R $USER:$USER /opt/albert
 cd "/opt/albert"
 makepkg --noconfirm --needed -si
 cd "$HOME/.dotfiles"
-cp -r "$PWD/config/albert" "$HOME/.config/"
+mkdir -p "$HOME/.config/albert"
+ln -s "$PWD/config/albert/albert.conf" "$HOME/.config/albert/albert.conf"
+ln -s "$PWD/config/albert/last_used_version" "$HOME/.config/albert/last_used_version"
 mkdir -p "$HOME/.config/autostart"
 cp "$PWD/config/autostart/albert.desktop" "$HOME/.config/autostart/albert.desktop"
