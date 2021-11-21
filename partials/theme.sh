@@ -3,6 +3,10 @@
 source "$PWD/utils.sh"
 
 cecho "RED" "Installing Icons ..."
+sudo git clone https://aur.archlinux.org/numix-icon-theme-git.git "/opt/numix-icon-theme-git"
+sudo chown -R $USER:$USER "/opt/numix-icon-theme-git"
+cd "/opt/numix-icon-theme-git"
+makepkg --noconfirm --needed -si
 sudo git clone https://aur.archlinux.org/numix-circle-icon-theme-git.git "/opt/numix-circle-icon-theme-git"
 sudo chown -R $USER:$USER "/opt/numix-circle-icon-theme-git"
 cd "/opt/numix-circle-icon-theme-git"
