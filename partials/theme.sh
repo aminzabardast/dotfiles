@@ -19,4 +19,4 @@ cd "/opt/whitesur-gtk-theme-git"
 makepkg --noconfirm --needed -si
 
 cd "$HOME/.dotfiles"
-#dconf write /org/gnome/desktop/interface/ dconf.conf
+dconf load /org/gnome/desktop/interface/ < dconf.conf
