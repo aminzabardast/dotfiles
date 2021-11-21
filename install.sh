@@ -26,5 +26,5 @@ sh "$PWD/partials/flameshot.sh"
 sh "$PWD/partials/fdm.sh"
 # Install Gnome
 sh "$PWD/partials/gnome.sh"
-# Theme Installation
-# Icons Installation
+# Theme and Icon
+sh "$PWD/partials/theme.sh"
