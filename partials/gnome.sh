@@ -14,4 +14,4 @@ gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
 
 cecho "RED" "Fixing a bug ..."
-cp "$PWD/etc/locale.conf" "/etc/locale.conf"
+sudo cp "$PWD/etc/locale.conf" "/etc/locale.conf"
