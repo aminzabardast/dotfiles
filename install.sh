@@ -28,3 +28,5 @@ sh "$PWD/partials/fdm.sh"
 sh "$PWD/partials/gnome.sh"
 # Theme and Icon
 sh "$PWD/partials/theme.sh"
+# Video Player
+sh "$PWD/partials/mpv.sh"
