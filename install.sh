@@ -30,3 +30,5 @@ sh "$PWD/partials/gnome.sh"
 sh "$PWD/partials/theme.sh"
 # Video Player
 sh "$PWD/partials/mpv.sh"
+# List Hardware
+sh "$PWD/partials/lshw.sh"
