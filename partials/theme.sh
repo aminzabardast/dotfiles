@@ -30,5 +30,5 @@ picture-options='zoom'
 picture-uri='$HOME/.config/background'
 primary-color='#000000000000'
 secondary-color='#000000000000'
-" > /tmp/org.gnome.desktop.background.dconf
+" > /tmp/org.gnome.desktop.background.conf
 dconf load /org/gnome/desktop/background/ < /tmp/org.gnome.desktop.background.conf
