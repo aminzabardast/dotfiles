@@ -19,4 +19,16 @@ cd "/opt/whitesur-gtk-theme-git"
 makepkg --noconfirm --needed -si
 
 cd "$HOME/.dotfiles"
-dconf load /org/gnome/desktop/interface/ < dconf.conf
+dconf load /org/gnome/desktop/interface/ < org.gnome.desktop.interface.conf
+
+cecho "RED" "Setting Background ..."
+ln -sf "$PWD/wallpapers/bg1.png" "$HOME/.config/background"
+
+echo "[/]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='$HOME/.config/background'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+" > /tmp/org.gnome.desktop.background.dconf
+dconf load /org/gnome/desktop/background/ < /tmp/org.gnome.desktop.background.conf
