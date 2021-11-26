@@ -22,4 +22,6 @@ sudo pacman --noconfirm --needed -S xorg \
                                     xz \
                                     neofetch \
                                     cmatrix \
-                                    htop
+                                    htop \
+                                    mc \
+                                    ranger
