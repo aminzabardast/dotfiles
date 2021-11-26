@@ -20,4 +20,5 @@ sudo pacman --noconfirm --needed -S xorg \
                                     openssl \
                                     zlib \
                                     xz \
-                                    neofetch
+                                    neofetch /
+                                    cmatrix
