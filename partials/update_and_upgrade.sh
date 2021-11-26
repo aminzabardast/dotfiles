@@ -19,4 +19,5 @@ sudo pacman --noconfirm --needed -S xorg \
                                     base-devel \
                                     openssl \
                                     zlib \
-                                    xz
+                                    xz \
+                                    neofetch
