@@ -8,6 +8,10 @@ alias open="xdg-open"
 alias pa='pyenv activate'
 alias pd='pyenv deactivate'
 alias pv='pyenv versions'
+# Tmux Stuff
+alias tn='tmux new -s '
+alias ta='tmux a'
+alias tls='tmux ls'
 # yt-dlp Stuff
 alias vdl='yt-dlp --write-sub -o "%(title)s.%(id)s.%(ext)s"'
 alias vdl-best='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --write-sub -o "%(title)s.%(id)s.%(ext)s"'
