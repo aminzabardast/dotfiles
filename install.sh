@@ -32,3 +32,5 @@ sh "$PWD/partials/theme.sh"
 sh "$PWD/partials/mpv.sh"
 # List Hardware
 sh "$PWD/partials/lshw.sh"
+# Install Googler
+sh "$PWD/partials/googler.sh"
