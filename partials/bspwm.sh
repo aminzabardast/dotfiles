@@ -3,9 +3,9 @@
 source "$PWD/utils.sh"
 
 cecho "RED" "Setting up BSPWM ..."
-mkdir $HOME/.config
-mkdir $HOME/.config/bspwm
-mkdir $HOME/.config/sxhkd
+mkdir "$HOME/.config"
+mkdir "$HOME/.config/bspwm"
+mkdir "$HOME/.config/sxhkd"
 cp /usr/share/doc/bspwm/examples/bspwmrc $HOME/.config/bspwm/bspwmrc
 cp /usr/share/doc/bspwm/examples/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
 
