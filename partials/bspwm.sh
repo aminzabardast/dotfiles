@@ -2,6 +2,12 @@
 
 source "$PWD/utils.sh"
 
+cecho "RED" "Installing BSP Window Manager ..."
+sudo pacman --noconfirm --needed -S bspwm \
+                                    sxhkd \
+                                    dmenu \
+                                    picom
+
 cecho "RED" "Setting up BSPWM ..."
 mkdir "$HOME/.config"
 mkdir "$HOME/.config/bspwm"
