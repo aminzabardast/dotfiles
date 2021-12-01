@@ -31,3 +31,5 @@ picom -f &
 exec bspwm
 " >> $HOME/.xinitrc
 
+cecho "RED" "Setting Initial Local ..."
+sudo cp "$PWD/etc/locale.conf" "/etc/locale.conf"
