@@ -12,7 +12,7 @@ cecho "RED" "Setting up BSPWM ..."
 mkdir "$HOME/.config"
 mkdir "$HOME/.config/bspwm"
 mkdir "$HOME/.config/sxhkd"
-cp /usr/share/doc/bspwm/examples/bspwmrc $HOME/.config/bspwm/bspwmrc
+ln -s "$PWD/config/bspwm/bspwmrc" "$HOME/.config/bspwm/bspwmrc"
 cp /usr/share/doc/bspwm/examples/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
 
 # Setting up wallpaper
@@ -33,3 +33,18 @@ exec bspwm
 
 cecho "RED" "Setting Initial Local ..."
 sudo cp "$PWD/etc/locale.conf" "/etc/locale.conf"
+
+cecho "RED" "Installing Polybar ..."
+sudo git clone https://aur.archlinux.org/polybar.git /opt/polybar
+sudo chown -R $USER:$USER /opt/polybar
+cd "/opt/polybar"
+makepkg --noconfirm --needed -si
+cd "$HOME/.dotfiles"
+mkdir -p "$HOME/.config/polybar"
+ln -s "$PWD/config/polybar/config" "$HOME/.config/polybar/config"
+ln -s "$PWD/config/polybar/launch.sh" "$HOME/.config/polybar/launch.sh"
+
+cecho "RED" "Installing Rofi ..."
+sudo pacman --noconfirm --needed -S Rofi
+cd "$HOME/.dotfiles"
+ln -s "$PWD/config/rofi/config" "$HOME/.config/rofi/config"

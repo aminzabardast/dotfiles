@@ -24,6 +24,8 @@ sh "$PWD/partials/flameshot.sh"
 sh "$PWD/partials/fdm.sh"
 # Install BSPWM
 sh "$PWD/partials/bspwm.sh"
+# Install Ploybar
+sh "$PWD/partials/polybar.sh"
 # Video Player
 sh "$PWD/partials/mpv.sh"
 # List Hardware
