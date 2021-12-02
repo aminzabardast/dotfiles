@@ -13,7 +13,7 @@ mkdir "$HOME/.config"
 mkdir "$HOME/.config/bspwm"
 mkdir "$HOME/.config/sxhkd"
 ln -s "$PWD/config/bspwm/bspwmrc" "$HOME/.config/bspwm/bspwmrc"
-cp /usr/share/doc/bspwm/examples/sxhkdrc $HOME/.config/sxhkd/sxhkdrc
+ln -s "$PWD/config/sxhkd/sxhkdrc" "$HOME/.config/sxhkd/sxhkdrc"
 
 # Setting up wallpaper
 echo "#!/bin/sh
