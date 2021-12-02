@@ -45,6 +45,6 @@ ln -s "$PWD/config/polybar/config" "$HOME/.config/polybar/config"
 ln -s "$PWD/config/polybar/launch.sh" "$HOME/.config/polybar/launch.sh"
 
 cecho "RED" "Installing Rofi ..."
-sudo pacman --noconfirm --needed -S Rofi
+sudo pacman --noconfirm --needed -S rofi
 cd "$HOME/.dotfiles"
 ln -s "$PWD/config/rofi/config" "$HOME/.config/rofi/config"
