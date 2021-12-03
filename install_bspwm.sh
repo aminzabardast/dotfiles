@@ -32,3 +32,5 @@ sh "$PWD/partials/mpv.sh"
 sh "$PWD/partials/lshw.sh"
 # Install Googler
 sh "$PWD/partials/googler.sh"
+# Install Virtualization Requirements
+sh "$PWD/partials/virt.sh"
