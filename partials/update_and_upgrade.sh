@@ -3,7 +3,7 @@
 source "$PWD/utils.sh"
 
 cecho "RED" "Updating Keyring ..."
-sudo pacman -Sy archlinux-keyring
+sudo pacman --noconfirm -Sy archlinux-keyring
 cecho "RED" "Updating Packages ..."
 sudo pacman --noconfirm --needed -Suy
 cecho "RED" "Installing Necessary Packages ..."
