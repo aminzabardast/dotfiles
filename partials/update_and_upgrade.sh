@@ -2,7 +2,7 @@
 
 source "$PWD/utils.sh"
 
-cecho "RED" "Updating KEy Rings ..."
+cecho "RED" "Updating Keyring ..."
 sudo pacman -Sy archlinux-keyring
 cecho "RED" "Updating Packages ..."
 sudo pacman --noconfirm --needed -Suy
