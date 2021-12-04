@@ -11,7 +11,7 @@ sudo pacman --noconfirm --needed -S xorg \
                                     xorg-xinit \
                                     arandr \
                                     feh \
-                                    firefox \
+                                    chromium \
                                     rxvt-unicode \
                                     openssh \
                                     base-devel \
@@ -22,4 +22,5 @@ sudo pacman --noconfirm --needed -S xorg \
                                     cmatrix \
                                     htop \
                                     mc \
-                                    ranger
+                                    ranger \
+                                    openssh
