@@ -23,4 +23,6 @@ sudo pacman --noconfirm --needed -S xorg \
                                     htop \
                                     mc \
                                     ranger \
-                                    openssh
+                                    openssh \
+                                    pass \
+                                    xclip
