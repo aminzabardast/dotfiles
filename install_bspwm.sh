@@ -34,3 +34,5 @@ sh "$PWD/partials/lshw.sh"
 sh "$PWD/partials/googler.sh"
 # Install Virtualization Requirements
 sh "$PWD/partials/virt.sh"
+# Install WMName
+sh "$PWD/partials/wmname.sh"

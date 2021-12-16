@@ -28,3 +28,6 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+
+# Intelij Stff
+wmname LG3D
