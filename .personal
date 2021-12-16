@@ -12,6 +12,7 @@ alias pv='pyenv versions'
 alias tn='tmux new -s '
 alias ta='tmux a'
 alias tls='tmux ls'
+alias tmux-six-window='tmux new-session \; split-window -h \; split-window -v -p 66 \; split-window -v \; select-pane -t 0 \; split-window -v -p 66 \; split-window -v \;'
 # yt-dlp Stuff
 alias vdl='yt-dlp --write-sub -o "%(title)s.%(id)s.%(ext)s"'
 alias vdl-best='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --write-sub -o "%(title)s.%(id)s.%(ext)s"'
