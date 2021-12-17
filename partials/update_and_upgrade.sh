@@ -10,6 +10,7 @@ cecho "RED" "Installing Necessary Packages ..."
 sudo pacman --noconfirm --needed -S xorg \
                                     xorg-xinit \
                                     arandr \
+                                    autorandr \
                                     feh \
                                     chromium \
                                     rxvt-unicode \
@@ -28,3 +29,4 @@ sudo pacman --noconfirm --needed -S xorg \
                                     xclip
 
 ln -sf "$PWD/personal" "$HOME/.personal"
+ln -sf "$PWD/config/autorandr" "$HOME/.config/autorandr"
