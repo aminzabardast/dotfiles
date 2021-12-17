@@ -26,3 +26,5 @@ sudo pacman --noconfirm --needed -S xorg \
                                     openssh \
                                     pass \
                                     xclip
+
+ln -sf "$PWD/personal" "$HOME/.personal"

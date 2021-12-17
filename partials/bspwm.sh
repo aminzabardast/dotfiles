@@ -6,7 +6,8 @@ cecho "RED" "Installing BSP Window Manager ..."
 sudo pacman --noconfirm --needed -S bspwm \
                                     sxhkd \
                                     dmenu \
-                                    picom
+                                    picom \
+                                    xsecurelock \
 
 cecho "RED" "Setting up BSPWM ..."
 mkdir "$HOME/.config"
@@ -22,14 +23,7 @@ chmod +x "$HOME/.fehbg"
 
 # Setting up .xinit
 cecho "RED" "Setting up .xinitrc ..."
-cp xinitrc $HOME/.xinitrc
-echo "
-setxkbmap us &
-$HOME/.fehbg &
-xsetroot -cursor_name left_ptr
-picom -f &
-exec bspwm
-" >> $HOME/.xinitrc
+ln -s "$PWD/xinitrc" "$HOME/.xinitrc"
 
 cecho "RED" "Setting Initial Local ..."
 sudo cp "$PWD/etc/locale.conf" "/etc/locale.conf"

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Set Background
+sh "$HOME/.fehbg"
+
+# Launch Polybar
+$HOME/.config/polybar/launch.sh

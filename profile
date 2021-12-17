@@ -29,5 +29,4 @@ else
     start_agent;
 fi
 
-# Intelij Stff
-wmname LG3D
+export XSECURELOCK_COMPOSITE_OBSCURER=0
