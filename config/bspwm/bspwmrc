@@ -20,3 +20,7 @@ bspc rule -a Screenkey manage=off
 
 # Launch Polybar
 $HOME/.config/polybar/launch.sh
+
+# JetBrains IDE / Bug Fix 
+wmname LG3D
+
