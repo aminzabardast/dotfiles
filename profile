@@ -29,4 +29,6 @@ else
     start_agent;
 fi
 
+# JetBrains / Bug Fix
 export XSECURELOCK_COMPOSITE_OBSCURER=0
+export _JAVA_AWT_WM_NONREPARENTING=1
