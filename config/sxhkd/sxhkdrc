@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	termite
 
 # program launcher
 super + @space
@@ -119,3 +119,12 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# Language Change
+#
+
+# Change keyboard language
+alt + space
+  {setxkbmap us, setxkbmap ir, setxkbmap tr, setxkbmap de}
+
