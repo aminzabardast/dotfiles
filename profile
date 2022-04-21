@@ -18,7 +18,6 @@ function start_agent {
 }
 
 # Source SSH settings, if applicable
-
 if [ -f "${SSH_ENV}" ]; then
     . "${SSH_ENV}" > /dev/null
     #ps ${SSH_AGENT_PID} doesn't work under cywgin
@@ -32,3 +31,7 @@ fi
 # JetBrains / Bug Fix
 export XSECURELOCK_COMPOSITE_OBSCURER=0
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Adding $HOME/.local/bin to $PATH
+
+export PATH="$HOME/.local/bin:$PATH"
