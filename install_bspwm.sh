@@ -36,3 +36,5 @@ sh "$PWD/partials/googler.sh"
 sh "$PWD/partials/virt.sh"
 # Install WMName
 sh "$PWD/partials/wmname.sh"
+# Install Terminal Emulator
+sh "$PWD/partials/terminal.sh"
