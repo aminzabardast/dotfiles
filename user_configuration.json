@@ -1,0 +1,31 @@
+{
+    "audio": "pipewire",
+    "config_version": "2.5.1",
+    "debug": false,
+    "desktop-environment": "i3",
+    "gfx_driver": "Intel (open-source)",
+    "harddrives": [
+        "/dev/vda"
+    ],
+    "hostname": "Amin-DailyDriver",
+    "mirror-region": {
+        "Turkey": {
+            "http://ftp.linux.org.tr/archlinux/$repo/os/$arch": true
+        }
+    },
+    "no_pkg_lookups": false,
+    "offline": false,
+    "packages": [
+        "vim",
+        "chromium",
+        "dmenu"
+    ],
+    "profile": {
+        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/desktop.py"
+    },
+    "script": "guided",
+    "silent": false,
+    "swap": true,
+    "timezone": "Europe/Istanbul",
+    "version": "2.5.1"
+}
