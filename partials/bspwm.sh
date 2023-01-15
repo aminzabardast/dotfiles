@@ -33,7 +33,7 @@ cecho "RED" "Installing Polybar ..."
 #sudo chown -R $USER:$USER /opt/polybar
 #cd "/opt/polybar"
 #makepkg --noconfirm --needed -si
-sudo pacman -S polybar
+sudo pacman --noconfirm --needed -S polybar
 cd "$HOME/.dotfiles"
 mkdir -p "$HOME/.config/polybar"
 ln -sf "$PWD/config/polybar/config" "$HOME/.config/polybar/config"
