@@ -2,7 +2,7 @@
     "audio": "pipewire",
     "config_version": "2.5.1",
     "debug": false,
-    "desktop-environment": "i3",
+    "desktop-environment": "bspwm",
     "gfx_driver": "Intel (open-source)",
     "harddrives": [
         "/dev/vda"
@@ -54,14 +54,37 @@
         "xclip",
         "wmname",
         "yt-dlp",
-        "zsh"
+        "zsh",
+        "cdrtools",
+        "git",
+        "firefox"
     ],
     "profile": {
-        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/desktop.py"
+        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/bspwm.py"
     },
     "script": "guided",
     "silent": false,
     "swap": true,
     "timezone": "Europe/Istanbul",
-    "version": "2.5.1"
+    "version": "2.5.1",
+    "additional-repositories": [
+        "multilib"
+    ],
+    "nic": {
+        "dhcp": true,
+        "dns": null,
+        "gateway": null,
+        "iface": null,
+        "ip": null,
+        "type": "nm"
+    },
+    "custom-commands": [
+        "install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc /home/amin/.config/bspwm/bspwmrc",
+        "install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc /home/amin/.config/sxhkd/sxhkdrc",
+        "git clone https://github.com/aminzabardast/dotfiles.git /home/amin/.dotfiles",
+        "git clone https://aur.archlinux.org/paru.git /opt/paru",
+        "sed -i 's/#MAKEFLAGS/MAKEFLAGS/g' /etc/makepkg.conf",
+        "sed -i 's/-j2/-j$(nproc)/g' /etc/makepkg.conf",
+        "sed -i 's/super + @space/ctrl + @space/gI' /home/amin/.config/sxhkd/sxhkdrc # This is for VM test"
+    ]
 }
