@@ -57,7 +57,8 @@
         "zsh",
         "cdrtools",
         "git",
-        "firefox"
+        "firefox",
+        "polybar"
     ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/bspwm.py"
