@@ -1,5 +1,5 @@
 {
-    "audio": "pulseaudio",
+    "audio": "pipewire",
     "config_version": "2.5.1",
     "debug": false,
     "desktop-environment": "bspwm",
@@ -64,7 +64,9 @@
         "clang",
         "alsa-firmware",
         "sof-firmware",
-        "alsa-ucm-conf"
+        "alsa-ucm-conf",
+        "browserpass",
+        "browserpass-chromium"
     ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/bspwm.py"
