@@ -1,12 +1,9 @@
 {
-    "audio": "pipewire",
+    "audio": "pulseaudio",
     "config_version": "2.5.1",
     "debug": false,
     "desktop-environment": "bspwm",
     "gfx_driver": "Intel (open-source)",
-    "harddrives": [
-        "/dev/vda"
-    ],
     "hostname": "Amin-DailyDriver",
     "mirror-region": {
         "Turkey": {
@@ -58,7 +55,13 @@
         "cdrtools",
         "git",
         "firefox",
-        "polybar"
+        "polybar",
+        "reflector",
+        "mesa-utils",
+        "aria2",
+        "pavucontrol",
+        "flameshot",
+        "clang"
     ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/bspwm.py"
@@ -82,7 +85,7 @@
     "custom-commands": [
         "install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc /home/amin/.config/bspwm/bspwmrc",
         "install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc /home/amin/.config/sxhkd/sxhkdrc",
-        "git clone https://github.com/aminzabardast/dotfiles.git /home/amin/.dotfiles",
+        "git clone -b 2023-01 https://github.com/aminzabardast/dotfiles.git /home/amin/.dotfiles",
         "git clone https://aur.archlinux.org/paru.git /opt/paru",
         "sed -i 's/#MAKEFLAGS/MAKEFLAGS/g' /etc/makepkg.conf",
         "sed -i 's/-j2/-j$(nproc)/g' /etc/makepkg.conf",
