@@ -61,7 +61,10 @@
         "aria2",
         "pavucontrol",
         "flameshot",
-        "clang"
+        "clang",
+        "alsa-firmware",
+        "sof-firmware",
+        "alsa-ucm-conf"
     ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/bspwm.py"
