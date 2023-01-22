@@ -9,4 +9,4 @@ sh "$PWD/partials/pyenv.sh"
 # Install BSPWM
 sh "$PWD/partials/bspwm.sh"
 # Install Virtualization Requirements
-sh "$PWD/partials/virt.sh"
+#sh "$PWD/partials/virt.sh"
