@@ -1,9 +1,29 @@
 # Dotfiles
 
-## Color Schema
+## Steps
 
-<span style="background:#04f7f8; color:#0d1e34; padding:10px;">#04f7f8</span><span style="background:#1e506e; color:#f9f8d4; padding:10px;">#1e506e</span><span style="background:#0d1e34; color:#f9f8d4; padding:10px;">#0d1e34</span><span style="background:#f42269; color:#0d1e34; padding:10px;">#f42269</span><span style="background:#05cd85; color:#0d1e34; padding:10px;">#05cd85</span><span style="background:#f9f8d4; color:#0d1e34; padding:10px;">#f9f8d4</span><span style="background:#f5f8b8; color:#0d1e34; padding:10px;">#f5f8b8</span>
+- Use `archinstall` config.
+- Reboot.
+- Change the ownership of `~/.dotfiles` and `~/.config` to the user.
+- `cd ~/.dotfiles; sh install.sh`
+    - partials/zsh
+    - partials/pyen
+    - partials/nvm
+    - partials/bspwm
+- Disable `lightdm` through `systemctl`
+- Enable `iwd` through `systemctl`
 
 ## Fonts
 
 Installing [Microsoft Fonts](https://wiki.archlinux.org/title/Microsoft_fonts) is a good idea.
+
+
+## Color Schema for Ricing (future project)
+
+- `#0d1e34`
+- `#f9f8d4`
+- `#f9f8d4`
+- `#0d1e34`
+- `#0d1e34`
+- `#0d1e34`
+- `#0d1e34`
