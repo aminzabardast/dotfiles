@@ -10,7 +10,6 @@
     - partials/nvm
     - partials/bspwm
 - Disable `lightdm` through `systemctl`
-- Enable `iwd` through `systemctl`
 - Enable `ssh-agent`: `systemctl --user enable --now ssh-agent`
 
 ## Fonts

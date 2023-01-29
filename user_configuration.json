@@ -61,6 +61,7 @@
         "sed -i 's/-j2/-j$(nproc)/g' /etc/makepkg.conf",
         "sed -i 's/super + @space/ctrl + @space/gI' /home/amin/.config/sxhkd/sxhkdrc # This is for VM test",
         "cp /etc/lightdm/Xsession /etc/lightdm/Xsession.backup",
-        "sed -i 's/\\.xprofile/\\.zprofile/g' /etc/lightdm/Xsession"
+        "sed -i 's/\\.xprofile/\\.zprofile/g' /etc/lightdm/Xsession",
+        "systemctl enable iwd"
     ]
 }
