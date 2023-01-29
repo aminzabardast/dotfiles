@@ -39,3 +39,5 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Adding $HOME/.local/bin to $PATH
 
 export PATH="$HOME/.local/bin:$PATH"
+
+autorandr -c
