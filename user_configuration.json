@@ -27,7 +27,8 @@
         "flameshot",
         "pavucontrol", "alsa-firmware", "sof-firmware", "alsa-ucm-conf",
         "zip", "unzip",
-        "openresolv", "iwd", "wireguard-tools"
+        "openresolv", "iwd", "wireguard-tools",
+        "lightdm-webkit2-greeter", "lightdm-webkit-theme-litarvan"
     ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/bspwm.py"
@@ -55,7 +56,7 @@
         "chown -R amin:amin /home/amin/.dotfiles",
         "chown -R amin:amin /home/amin/.config",
         "git clone https://aur.archlinux.org/paru.git /opt/paru",
-        "chown -R amin:amin /pot/paru",
+        "chown -R amin:amin /opt/paru",
         "sed -i 's/#MAKEFLAGS/MAKEFLAGS/g' /etc/makepkg.conf",
         "sed -i 's/-j2/-j$(nproc)/g' /etc/makepkg.conf",
         "sed -i 's/super + @space/ctrl + @space/gI' /home/amin/.config/sxhkd/sxhkdrc # This is for VM test",
