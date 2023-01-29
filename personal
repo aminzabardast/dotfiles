@@ -28,3 +28,5 @@ alias cpusetlow='echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/
 alias cpushowperf='watch -n 0.5 "cat /proc/cpuinfo | grep MHz"'
 # RSync Stuff
 alias cpprogress='rsync -ahP '
+# NVM Stuff
+export NODE_OPTIONS=--max_old_space_size=4096
