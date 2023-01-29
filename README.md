@@ -4,7 +4,6 @@
 
 - Use `archinstall` config.
 - Reboot.
-- Change the ownership of `~/.dotfiles` and `~/.config` to the user.
 - `cd ~/.dotfiles; sh install.sh`
     - partials/zsh
     - partials/pyen
