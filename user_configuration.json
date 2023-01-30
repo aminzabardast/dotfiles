@@ -67,6 +67,6 @@
         "sed -i '/\\[Seat:\\*\\]/a greeter-session=lightdm-webkit2-greeter' /etc/lightdm/lightdm.conf",
         "cp /etc/lightdm/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf.backup",
         "sed -i 's/^webkit_theme/#webkit_theme/g' /etc/lightdm/lightdm-webkit2-greeter.conf",
-        "sed -i '/\\[greeter\\]/a webkit_theme=litarvan' /etc/lightdm/lightdm-webkit2-greeter.conf"
+        "sed -i '/^\\[greeter\\]/a webkit_theme = litarvan' /etc/lightdm/lightdm-webkit2-greeter.conf"
     ]
 }
