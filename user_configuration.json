@@ -64,7 +64,7 @@
         "cp /etc/lightdm/Xsession /etc/lightdm/Xsession.backup",
         "sed -i 's/\\.xprofile/\\.zprofile/g' /etc/lightdm/Xsession",
         "cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup",
-        "sed -i '/\\[Seat:\\*\\]/a greeter-session=lightdm-webkit2-greeter' /etc/lightdm/lightdm.conf",
+        "sed -i '/^\\[Seat:\\*\\]/a greeter-session=lightdm-webkit2-greeter' /etc/lightdm/lightdm.conf",
         "cp /etc/lightdm/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf.backup",
         "sed -i 's/^webkit_theme/#webkit_theme/g' /etc/lightdm/lightdm-webkit2-greeter.conf",
         "sed -i '/^\\[greeter\\]/a webkit_theme = litarvan' /etc/lightdm/lightdm-webkit2-greeter.conf"
