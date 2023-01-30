@@ -60,8 +60,12 @@
         "sed -i 's/#MAKEFLAGS/MAKEFLAGS/g' /etc/makepkg.conf",
         "sed -i 's/-j2/-j$(nproc)/g' /etc/makepkg.conf",
         "sed -i 's/super + @space/ctrl + @space/gI' /home/amin/.config/sxhkd/sxhkdrc # This is for VM test",
+        "systemctl enable iwd",
         "cp /etc/lightdm/Xsession /etc/lightdm/Xsession.backup",
         "sed -i 's/\\.xprofile/\\.zprofile/g' /etc/lightdm/Xsession",
-        "systemctl enable iwd"
+        "cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup",
+        "sed -i 's/^#greeter-session=[\\w_\\d]+]/greeter-session=lightdm-webkit2-greeter/g' /etc/lightdm/lightdm.conf",
+        "cp /etc/lightdm/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf.backup",
+        "sed -i 's/^webkit_theme=[\\w_\\d]+/webkit_theme=litarvan/g' /etc/lightdm/lightdm-webkit2-greeter.conf"
     ]
 }
