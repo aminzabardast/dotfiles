@@ -16,7 +16,8 @@
         "chromium", "firefox",
         "man-db", "texinfo", "man-pages",
         "base-devel", "openssh", "openssl", "zlib", "xz", "clang",
-        "sxhkd", "rofi", "feh", "alacritty", "fzf", "tmux", "lshw", "dmenu", "vim", "picom", "xsecurelock", "xorg-xinit", "xorg", "mesa-utils", "arandr", "autorandr", "neofetch", "htop", "xclip", "wmname", "zsh", "git", "polybar", "reflector", "aria2", "wget", "ttf-liberation", "tk",
+        "sxhkd", "rofi", "feh", "alacritty", "fzf", "tmux", "lshw", "dmenu", "picom", "xsecurelock", "xorg-xinit", "xorg", "mesa-utils", "arandr", "autorandr", "neofetch", "htop", "xclip", "wmname", "zsh", "git", "polybar", "reflector", "aria2", "wget", "ttf-liberation", "tk",
+        "vim", "code",
         "duf", "ncdu", "udisks2",
         "docker",
         "mpv", "yt-dlp",
@@ -26,7 +27,8 @@
         "flameshot",
         "pavucontrol", "alsa-firmware", "sof-firmware", "alsa-ucm-conf",
         "zip", "unzip",
-        "openresolv", "iwd", "wireguard-tools"
+        "openresolv", "iwd", "wireguard-tools",
+        "lightdm-webkit2-greeter", "lightdm-webkit-theme-litarvan"
     ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/bspwm.py"
@@ -51,9 +53,20 @@
         "install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc /home/amin/.config/bspwm/bspwmrc",
         "install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc /home/amin/.config/sxhkd/sxhkdrc",
         "git clone https://github.com/aminzabardast/dotfiles.git /home/amin/.dotfiles",
+        "chown -R amin:amin /home/amin/.dotfiles",
+        "chown -R amin:amin /home/amin/.config",
         "git clone https://aur.archlinux.org/paru.git /opt/paru",
+        "chown -R amin:amin /opt/paru",
         "sed -i 's/#MAKEFLAGS/MAKEFLAGS/g' /etc/makepkg.conf",
         "sed -i 's/-j2/-j$(nproc)/g' /etc/makepkg.conf",
-        "sed -i 's/super + @space/ctrl + @space/gI' /home/amin/.config/sxhkd/sxhkdrc # This is for VM test"
+        "sed -i 's/super + @space/ctrl + @space/gI' /home/amin/.config/sxhkd/sxhkdrc # This is for VM test",
+        "systemctl enable iwd",
+        "cp /etc/lightdm/Xsession /etc/lightdm/Xsession.backup",
+        "sed -i 's/\\.xprofile/\\.zprofile/g' /etc/lightdm/Xsession",
+        "cp /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.backup",
+        "sed -i '/\\[Seat:\\*\\]/a greeter-session=lightdm-webkit2-greeter' /etc/lightdm/lightdm.conf",
+        "cp /etc/lightdm/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf.backup",
+        "sed -i 's/^webkit_theme/#webkit_theme/g' /etc/lightdm/lightdm-webkit2-greeter.conf",
+        "sed -i '/^\\[greeter\\]/a webkit_theme = litarvan' /etc/lightdm/lightdm-webkit2-greeter.conf"
     ]
 }
