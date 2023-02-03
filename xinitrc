@@ -35,5 +35,5 @@ fi
 setxkbmap us &
 $HOME/.fehbg &
 xsetroot -cursor_name left_ptr
-picom --no-fade-openclose &
+picom --no-fading-openclose &
 exec bspwm
