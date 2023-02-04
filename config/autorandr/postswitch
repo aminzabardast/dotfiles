@@ -1,7 +1,11 @@
 #!/bin/sh
 
 # Set Background
-sh "$HOME/.fehbg"
+wal -R -q -e
+
+# Picom
+picom --no-fading-openclose -b &
 
 # Launch Polybar
 $HOME/.config/polybar/launch.sh
+

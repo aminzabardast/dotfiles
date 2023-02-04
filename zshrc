@@ -1,3 +1,6 @@
+# Colors
+wal -R -q -e
+
 # Oh-my-zsh Stuff
 export ZSH="/home/amin/.oh-my-zsh"
 ZSH_THEME="dstufft"
@@ -25,3 +28,4 @@ eval "$(pyenv virtualenv-init -)"
 
 # Aliases
 source $HOME/.personal
+

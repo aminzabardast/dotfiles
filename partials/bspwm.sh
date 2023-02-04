@@ -18,13 +18,10 @@ ln -sf "$PWD/config/sxhkd/sxhkdrc" "$HOME/.config/sxhkd/sxhkdrc"
 
 # Setting up wallpaper and autoranr postswitch
 cecho "RED" "Setting up wallpaper ..."
-echo "#!/bin/sh
-feh --no-fehbg --bg-fill $HOME/.dotfiles/wallpaper.png" > "$HOME/.fehbg"
-chmod +x "$HOME/.fehbg"
 mkdir -p "$HOME/.config/autorandr"
 ln -sf "$PWD/config/autorandr/postswitch" "$HOME/.config/autorandr/postswitch"
+wal -i "$PWD/wallpaper.jpg"
 
-# Setting up .xinit
 cecho "RED" "Setting up .xinitrc ..."
 ln -sf "$PWD/xinitrc" "$HOME/.xinitrc"
 
