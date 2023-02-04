@@ -21,6 +21,9 @@ bspc rule -a mpv sticky=on
 # Launch Polybar
 $HOME/.config/polybar/launch.sh
 
+# TODO: FIX THIS
+sh $HOME/.config/autorandr/postswitch
+
 # JetBrains IDE / Bug Fix 
 wmname LG3D
 
