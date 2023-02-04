@@ -7,5 +7,4 @@ wal -R -q -e
 picom --no-fading-openclose -b &
 
 # Launch Polybar
-$HOME/.config/polybar/launch.sh
-
+sh $HOME/.config/polybar/colorblocks/launch.sh

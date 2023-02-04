@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show run
+	sh $HOME/.config/polybar/colorblocks/scripts/launcher.sh
 
 # make sxhkd reload its configuration files:
 super + Escape

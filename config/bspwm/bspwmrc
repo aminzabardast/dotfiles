@@ -19,11 +19,10 @@ bspc rule -a Screenkey manage=off
 bspc rule -a mpv sticky=on
 
 # Launch Polybar
-$HOME/.config/polybar/launch.sh
+sh $HOME/.config/polybar/colorblocks/launch.sh
 
 # TODO: FIX THIS
 sh $HOME/.config/autorandr/postswitch
 
 # JetBrains IDE / Bug Fix 
 wmname LG3D
-
