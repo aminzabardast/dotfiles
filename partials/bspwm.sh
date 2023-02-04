@@ -31,21 +31,18 @@ ln -sf "$PWD/xinitrc" "$HOME/.xinitrc"
 cecho "RED" "Setting Initial Local ..."
 sudo cp "$PWD/etc/locale.conf" "/etc/locale.conf"
 
-#cecho "RED" "Installing Polybar ..."
-#sudo git clone https://aur.archlinux.org/polybar.git /opt/polybar
-#sudo chown -R $USER:$USER /opt/polybar
-#cd "/opt/polybar"
-#makepkg --noconfirm --needed -si
-#sudo pacman --noconfirm --needed -S polybar
 cecho "RED" "Setting up polybar ..."
 cd "$HOME/.dotfiles"
 mkdir -p "$HOME/.config/polybar"
 ln -sf "$PWD/config/polybar/config" "$HOME/.config/polybar/config"
 ln -sf "$PWD/config/polybar/launch.sh" "$HOME/.config/polybar/launch.sh"
 
-#cecho "RED" "Installing Rofi ..."
-#sudo pacman --noconfirm --needed -S rofi
 cecho "RED" "Setting up Rofi ..."
 cd "$HOME/.dotfiles"
 mkdir -p "$HOME/.config/rofi"
 ln -sf "$PWD/config/rofi/config.rasi" "$HOME/.config/rofi/config.rasi"
+
+cecho "RED" "Setting up Alacritty ..."
+cd "$HOME/.dotfiles"
+mkdir -p "$HOME/.config/alacritty"
+ln -sf "$PWD/config/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
