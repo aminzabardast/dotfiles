@@ -25,7 +25,7 @@
         "pass", "browserpass", "browserpass-chromium",
         "cdrtools",
         "flameshot",
-        "pavucontrol", "alsa-firmware", "sof-firmware", "alsa-ucm-conf",
+        "pavucontrol", "alsa-firmware", "sof-firmware", "alsa-ucm-conf", "pamixer", "spotifyctl",
         "zip", "unzip",
         "openresolv", "iwd", "wireguard-tools",
         "lightdm-webkit2-greeter", "lightdm-webkit-theme-litarvan"
