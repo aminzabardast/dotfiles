@@ -23,6 +23,16 @@ Follow these steps:
 1. Go to `/opt/paru`.
 2. Make and install `makepkg -si`.
 
+## Disable SSH with Password
+
+Having SSH with password is not as secure. The following steps are for disabling the password authentication.
+
+1. Edit `/etc/ssh/sshd_config` and change `PasswordAuthentication` to `no`.
+2. Restart the `sshd` service:
+    ```shell
+    systemctl restart sshd
+    ``` 
+
 ## Result
 
 This will install [Arch Linux](https://archlinux.org/), with [BSPWM](https://wiki.archlinux.org/title/bspwm), [DMenu](https://wiki.archlinux.org/title/dmenu), and [urxvt](https://wiki.archlinux.org/title/rxvt-unicode).
