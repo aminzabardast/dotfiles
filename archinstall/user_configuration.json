@@ -20,7 +20,7 @@
     "custom-commands": [
         "install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc /home/amin/.config/bspwm/bspwmrc",
         "install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc /home/amin/.config/sxhkd/sxhkdrc",
-        "# sed -i 's/super + @space/ctrl + @space/gI' /home/amin/.config/sxhkd/sxhkdrc # This is for VM test. Uncomment if necessary.",
+        "#sed -i 's/super + @space/ctrl + @space/gI' /home/amin/.config/sxhkd/sxhkdrc # This is for VM test. Uncomment if necessary.",
         "git clone https://aur.archlinux.org/paru.git /opt/paru # Using Paru as Package",
         "chown -R amin:amin /opt/paru",
         "sed -i 's/#MAKEFLAGS/MAKEFLAGS/g' /etc/makepkg.conf",
