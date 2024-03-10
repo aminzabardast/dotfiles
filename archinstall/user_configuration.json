@@ -1,0 +1,70 @@
+{
+    "hostname": "WorkstationComputer",
+    "packages": [
+        "rxvt-unicode",
+        "man-db", "texinfo", "man-pages",
+        "base-devel", "openssh", "openssl", "zlib", "xz", "clang",
+        "vim",
+        "duf", "ncdu", "udisks2",
+        "zip", "unzip",
+        "aria2", "wget",
+        "fzf",
+        "tmux", "lshw",
+        "sxhkd", "dmenu", "picom", "xorg-xinit", "xorg", "mesa-utils", "arandr", "neofetch", "htop", "wmname", "zsh", "git", "reflector", "ttf-liberation"
+    ],
+    "custom-commands": [
+        "install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc /home/amin/.config/bspwm/bspwmrc",
+        "install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc /home/amin/.config/sxhkd/sxhkdrc",
+        "sed -i 's/super + @space/ctrl + @space/gI' /home/amin/.config/sxhkd/sxhkdrc # This is for VM test",
+        "git clone https://aur.archlinux.org/paru.git /opt/paru # Using Paru as Package",
+        "chown -R amin:amin /opt/paru",
+        "sed -i 's/#MAKEFLAGS/MAKEFLAGS/g' /etc/makepkg.conf",
+        "sed -i 's/-j2/-j$(nproc)/g' /etc/makepkg.conf"
+    ],
+    "additional-repositories": [
+        "multilib"
+    ],
+    "archinstall-language": "English",
+    "audio_config": {
+        "audio": "pipewire"
+    },
+    "bootloader": "Systemd-boot",
+    "config_version": "2.7.1",
+    "debug": false,
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US"
+    },
+    "network_config": {
+        "type": "iso"
+    },
+    "no_pkg_lookups": false,
+    "ntp": true,
+    "offline": false,
+    "parallel downloads": 0,
+    "profile_config": {
+        "gfx_driver": "All open-source",
+        "greeter": "lightdm-gtk-greeter",
+        "profile": {
+            "custom_settings": {
+                "Bspwm": {}
+            },
+            "details": [
+                "Bspwm"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": "guided",
+    "silent": false,
+    "skip_ntp": false,
+    "skip_version_check": false,
+    "swap": true,
+    "timezone": "Europe/Istanbul",
+    "uki": false,
+    "version": "2.7.1"
+}
