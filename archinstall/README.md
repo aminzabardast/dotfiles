@@ -15,8 +15,11 @@
     1. Make sure to replace the username in the file (`custom-commands` section) with the *User* you created.
 7. Reboot after installation is done.
 
-## Paru as Package Manager
+## [Paru](https://github.com/Morganamilo/paru) as Package Manager
 
+*Paru* is already pulled to `/opt/paru` via `user_configuration.json`.
+
+Follow these steps:
 1. Go to `/opt/paru`.
 2. Make and install `makepkg -si`.
 
