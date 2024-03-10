@@ -25,7 +25,7 @@
         "chown -R amin:amin /opt/paru",
         "sed -i 's/#MAKEFLAGS/MAKEFLAGS/g' /etc/makepkg.conf",
         "sed -i 's/-j2/-j$(nproc)/g' /etc/makepkg.conf",
-        "systemctl enable --now sshd",
+        "systemctl enable sshd",
         "#sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config # This is to disable password authentication using SSH. Do this after the key is added to the authentication keys."
     ],
     "additional-repositories": [
