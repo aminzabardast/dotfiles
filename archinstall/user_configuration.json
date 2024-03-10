@@ -30,7 +30,10 @@
         "#sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/gI' /etc/ssh/sshd_config # This is to disable password authentication using SSH. Do this after the key is added to the authentication keys.",
         "sed -i 's/timeout 3/timeout 0/gI' /boot/loader/loader.conf",
         "curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh > /home/amin/omz.sh",
-        "chsh -s /usr/bin/zsh"
+        "chsh -s /usr/bin/zsh",
+        "curl -L https://aminzabardast.github.io/dotfiles/zsh/zshrc > /home/amin/zshrc",
+        "curl -L https://aminzabardast.github.io/dotfiles/zsh/zprofile > /home/amin/zprofile",
+        "curl -L https://aminzabardast.github.io/dotfiles/zsh/personal > /home/amin/personal"
     ],
     "additional-repositories": [
         "multilib"
