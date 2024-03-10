@@ -2,12 +2,24 @@
 
 ## Steps
 
-1. Download [Arch Linux's ISO File](https://archlinux.org/download/) and make a bootable drive (or pass the iso to virtualization medium).
+1. Download [Arch Linux's ISO File](https://archlinux.org/download/) and make a bootable drive (or pass the ISO to virtualization medium).
 2. Boot into installation environment.
 3. Load `user_configuration.json` into a file (for example `uc.json`).
-4. Run the installer: `archinstall --conf uc.json`.
-5. Provide a *User*.
-6. Provide a *Drive Partition Schema*.
+    ```shell
+    curl -L aminzabardast.github.io/dotfiles/archinstall/user_configuration.json > uc.json
+    ```
+
+4. Run the installer: `archinstall --conf <config_file>`.
+5. Provide a *Disk Configuration*. `Disk Configuration > Use a best-effort default partition layout > Select devices > ext4 type`.
+6. Create a `sudoer` *User*.
+    1. Make sure to replace the username in the file (`custom-commands` section) with the *User* you created.
+7. Reboot after installation is done.
+
+## Paru as Package Manager
+
+1. Go to `/opt/paru`.
+2. Make and install `makepkg -si`.
+
 
 ## Result
 
