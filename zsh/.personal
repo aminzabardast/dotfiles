@@ -1,0 +1,20 @@
+# List Stuff
+alias l='ls -F'
+alias la='ls -aF'
+alias ll='ls -rtlaFsh'
+
+# Pyenv Stuff
+alias pa='pyenv activate'
+alias pd='pyenv deactivate'
+alias pv='pyenv versions'
+
+# Tmux Stuff
+alias tn='tmux new -s '
+alias ta='tmux attach -t '
+alias tls='tmux ls'
+
+# RSync Stuff
+alias cpprogress='rsync -ahP '
+
+# NVM Stuff
+export NODE_OPTIONS=--max_old_space_size=4096
