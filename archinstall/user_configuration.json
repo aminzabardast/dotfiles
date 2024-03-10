@@ -11,7 +11,11 @@
         "aria2", "wget",
         "fzf",
         "tmux", "lshw",
-        "sxhkd", "dmenu", "picom", "xorg-xinit", "xorg", "mesa-utils", "arandr", "neofetch", "htop", "wmname", "zsh", "git", "reflector", "ttf-liberation"
+        "htop", "btop", "nvtop",
+        "git",
+        "zsh",
+        "picom", "xorg-xinit", "xorg", "mesa-utils", "arandr",
+        "sxhkd", "dmenu", "neofetch", "wmname",  "reflector", "ttf-liberation"
     ],
     "custom-commands": [
         "install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc /home/amin/.config/bspwm/bspwmrc",
