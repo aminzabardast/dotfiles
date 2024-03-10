@@ -15,7 +15,8 @@
         "git",
         "zsh",
         "picom", "xorg-xinit", "xorg", "mesa-utils", "arandr",
-        "sxhkd", "dmenu", "neofetch", "wmname",  "reflector", "ttf-liberation"
+        "sxhkd", "dmenu", "neofetch", "wmname",  "reflector", "ttf-liberation",
+        "rsync"
     ],
     "custom-commands": [
         "install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc /home/amin/.config/bspwm/bspwmrc",
