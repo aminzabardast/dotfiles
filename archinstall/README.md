@@ -33,6 +33,18 @@ Having SSH with password is not as secure. The following steps are for disabling
     systemctl restart sshd
     ``` 
 
+## ZSH and OMZ
+
+`ZSH` is already installed. You need to set `zsh` as the main shell and setup `oh-my-zsh`.
+
+Steps:
+1. `cd` to home directory.
+2. `sh omz.sh`
+4. `mv zshrc .zshrc`
+5. `mv zprofile .zprofile`
+6. `mv personal .personal`
+7. Reboot.
+
 ## Result
 
 This will install [Arch Linux](https://archlinux.org/), with [BSPWM](https://wiki.archlinux.org/title/bspwm), [DMenu](https://wiki.archlinux.org/title/dmenu), and [urxvt](https://wiki.archlinux.org/title/rxvt-unicode).
