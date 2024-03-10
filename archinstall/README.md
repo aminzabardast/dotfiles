@@ -8,7 +8,7 @@
     ```shell
     curl -L aminzabardast.github.io/dotfiles/archinstall/user_configuration.json > uc.json
     ```
-
+    1. Uncomment (Virtual Machine) VM related lines in `user_configuration.json`.
 4. Run the installer: `archinstall --conf <config_file>`.
 5. Provide a *Disk Configuration*. `Disk Configuration > Use a best-effort default partition layout > Select devices > ext4 type`.
 6. Create a `sudoer` *User*.
