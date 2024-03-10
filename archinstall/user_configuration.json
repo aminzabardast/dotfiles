@@ -11,7 +11,11 @@
         "aria2", "wget",
         "fzf",
         "tmux", "lshw",
-        "sxhkd", "dmenu", "picom", "xorg-xinit", "xorg", "mesa-utils", "arandr", "neofetch", "htop", "wmname", "zsh", "git", "reflector", "ttf-liberation"
+        "htop", "btop", "nvtop",
+        "git",
+        "zsh",
+        "picom", "xorg-xinit", "xorg", "mesa-utils", "arandr",
+        "sxhkd", "dmenu", "neofetch", "wmname",  "reflector", "ttf-liberation"
     ],
     "custom-commands": [
         "install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc /home/amin/.config/bspwm/bspwmrc",
@@ -20,7 +24,9 @@
         "git clone https://aur.archlinux.org/paru.git /opt/paru # Using Paru as Package",
         "chown -R amin:amin /opt/paru",
         "sed -i 's/#MAKEFLAGS/MAKEFLAGS/g' /etc/makepkg.conf",
-        "sed -i 's/-j2/-j$(nproc)/g' /etc/makepkg.conf"
+        "sed -i 's/-j2/-j$(nproc)/g' /etc/makepkg.conf",
+        "systemctl enable sshd",
+        "#sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config # This is to disable password authentication using SSH. Do this after the key is added to the authentication keys."
     ],
     "additional-repositories": [
         "multilib"
