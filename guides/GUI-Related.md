@@ -13,3 +13,7 @@ systemctl disable lightdm.service
 # Enabling
 systemctl enable --now lightdm.service
 ```
+
+# Auto Background Set
+
+You can use Feh to setup background images. Check [the guide on ArchWiki](https://wiki.archlinux.org/title/Feh#Set_the_wallpaper) for more detail.
