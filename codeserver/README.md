@@ -27,11 +27,21 @@ password: <PASS>
 
 You can use [self-signed certificates](https://coder.com/docs/code-server/latest/guide#https-and-self-signed-certificates) for accessing the code server with HTTPS.
 
-Add the following line to `~/.config/code-server/config.yaml`
+The easiest way is to add the following line to `~/.config/code-server/config.yaml`
 
 ```yaml
 cert: true
 ```
+
+However, if the certificates are generated separately, they can be used in `nginx` proxy settings.
+
+To do that, you can use the following line.
+
+```shell
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ~/.config/code-server/MyKey.key -out ~/.config/code-server/MyCertificate.crt
+```
+
+They can be used to tun the `code-server`.
 
 ## Running Code Server
 
@@ -39,6 +49,12 @@ The following will start a Code Server session. I suggest also passing `--disabl
 
 ```shell
 code-server --disable-workspace-trust
+```
+
+If you have generated the key and certificate files, the use the following command.
+
+```shell
+code-server --disable-workspace-trust --cert=.config/code-server/MyCertificate.crt --cert-key=.config/code-server/MyKey.key
 ```
 
 ## Accessing Code Server through a local domain
