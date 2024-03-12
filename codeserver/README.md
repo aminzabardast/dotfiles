@@ -27,11 +27,21 @@ password: <PASS>
 
 You can use [self-signed certificates](https://coder.com/docs/code-server/latest/guide#https-and-self-signed-certificates) for accessing the code server with HTTPS.
 
-Add the following line to `~/.config/code-server/config.yaml`
+The easiest way is to add the following line to `~/.config/code-server/config.yaml`
 
 ```yaml
 cert: true
 ```
+
+However, if the certificates are generated separately, they can be used in `nginx` proxy settings.
+
+To do that, you can use the following line.
+
+```shell
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ~/.config/code-server/MyKey.key -out ~/.config/code-server/MyCertificate.crt
+```
+
+They can be used to tun the `code-server`.
 
 ## Running Code Server
 
@@ -41,9 +51,15 @@ The following will start a Code Server session. I suggest also passing `--disabl
 code-server --disable-workspace-trust
 ```
 
+If you have generated the key and certificate files, the use the following command.
+
+```shell
+code-server --disable-workspace-trust --cert=.config/code-server/MyCertificate.crt --cert-key=.config/code-server/MyKey.key
+```
+
 ## Accessing Code Server through a local domain
 
-You can access the running code server using a local domain if you have a local DNS available.
+You can access the running code server using a local domain if you have a local DNS available, and has `nginx` set up.
 
 One option for a local DNS is [`dnsmasq`](https://wiki.archlinux.org/title/dnsmasq).
 
@@ -62,6 +78,7 @@ Steps:
     server=1.0.0.1
 
     # Add domains which you want to force to an IP address here.
+    # The IP can be the location of nginx proxy server or the Workstation machine itself.
     address=/example.com/192.168.0.2
 
     # If you want dnsmasq to listen for DHCP and DNS requests only on specified interfaces (and the loopback) give the name of the interface (eg eth0) here. Repeat the line for more than one interface.
@@ -105,3 +122,63 @@ Steps:
 - `server=1.1.1.1` and `server=1.0.0.1` are the backup DNS servers. If the local DNS server cannot find the record to location of a domain (which is almost all domain), your request will be asked from the one up the chain.
 - `address=/example.com/192.168.0.2` is to remap the domain `example.com` to a new IP.
 - `interface=eth0` and `interface=wlan0` are the interfaces the DNS listens to DNS requests (the port will be the default port *53*).
+
+## Setting up `nginx`
+
+Create the `~/nginx/docker-compose.yaml` and populate it with the following.
+
+```yaml
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./conf.d/:/etc/nginx/conf.d/
+    ports:
+      - 80:80
+      - 443:443
+```
+
+and create the `~/nginx/conf.d/example.com.conf` populated with the following.
+
+```conf
+server {
+    listen          80;
+    server_name     example.com;
+
+    location / {
+        proxy_pass      http://192.168.0.3:8080/; # 192.168.0.3 is the Workstation machine and 8080 is the port for code-server
+    }
+}
+
+server {
+    listen          443 ssl;
+    server_name     example.com;
+
+    # These needs to be hthe files you generated. You have to move the if the WS machine and DNS/nginx machine are not the same.
+    ssl_certificate         /etc/nginx/conf.d/example.com.crt;
+    ssl_certificate_key     /etc/nginx/conf.d/example.com.key;
+
+    ssl_protocols           TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+
+    location / {
+	    allow                   all;
+        proxy_pass              https://192.168.0.3:8080/; # 192.168.0.3 is the Workstation machine and 8080 is the port for code-server
+	    proxy_http_version      1.1;
+        proxy_set_header        Host $host;
+        proxy_set_header        Upgrade $http_upgrade;
+        proxy_set_header        Connection upgrade;
+    }
+}
+```
+
+One more thing you need to do is to move the key and certificate files you generated to `/etc/nginx/conf.d` and use them as `ssl_certificate` and `ssl_certificate_key`.
+
+After all this, create the system by the following command.
+
+```shell
+docker-compose up -d
+```
+
+Note that:
+-   The 80 and 443 ports should be open and accessible on all devices (Workstation and DNS Server).
