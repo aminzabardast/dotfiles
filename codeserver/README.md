@@ -40,3 +40,68 @@ The following will start a Code Server session. I suggest also passing `--disabl
 ```shell
 code-server --disable-workspace-trust
 ```
+
+## Accessing Code Server through a local domain
+
+You can access the running code server using a local domain if you have a local DNS available.
+
+One option for a local DNS is [`dnsmasq`](https://wiki.archlinux.org/title/dnsmasq).
+
+Although it is possible to host the DNS domain on the same machine as the Code Server, we assume the DNS will be set up on a separate server (I personally use a Raspberry Pi 4).
+
+Steps:
+1. Install the `dnsmasq` (this depends on the OS).
+2. Start Service.
+    ```shell
+    systemctl enable --now dnsmasq.service
+    ```
+3. Edit configuration.
+    ```conf
+    # Add other name servers here.
+    server=1.1.1.1
+    server=1.0.0.1
+
+    # Add domains which you want to force to an IP address here.
+    address=/example.com/192.168.0.2
+
+    # If you want dnsmasq to listen for DHCP and DNS requests only on specified interfaces (and the loopback) give the name of the interface (eg eth0) here. Repeat the line for more than one interface.
+    interface=eth0
+    interface=wlan0
+    ```
+4. Syntax check.
+    ```shell
+    systemctl restart dnsmasq.service
+    dnsmaq --test
+    # The response should be: > syntax check OK.
+    ```
+5. Test dns request to domains using local DNS (127.0.0.1) and cloudflare DNS (1.1.1.1).
+    ```shell
+    dig example.com @127.0.0.1
+
+    # The response example:
+    # ; <<>> DiG xxx <<>> example.com @127.0.0.1
+    # ...
+
+    # ;; ANSWER SECTION:
+    # example.com.		0	IN	A	192.168.0.2
+
+    # ...
+
+    dig example.com @1.1.1.1
+
+    # The response example:
+    # ; <<>> DiG xxx <<>> example.com @1.1.1.1
+    # ...
+
+    # ;; ANSWER SECTION:
+    # example.com.		0	IN	A	93.184.216.34
+
+    # ...
+    ```
+6. Set DNS to local DNS by changing it to the IP of the DNS machine (either manually or by setting the local DNS on the router).
+
+### Explaining the configuration
+
+- `server=1.1.1.1` and `server=1.0.0.1` are the backup DNS servers. If the local DNS server cannot find the record to location of a domain (which is almost all domain), your request will be asked from the one up the chain.
+- `address=/example.com/192.168.0.2` is to remap the domain `example.com` to a new IP.
+- `interface=eth0` and `interface=wlan0` are the interfaces the DNS listens to DNS requests (the port will be the default port *53*).
