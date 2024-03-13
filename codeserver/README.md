@@ -41,7 +41,7 @@ To do that, you can use the following line.
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ~/.config/code-server/MyKey.key -out ~/.config/code-server/MyCertificate.crt
 ```
 
-They can be used to tun the `code-server`.
+They can be used to turn the `code-server`.
 
 ## Running Code Server
 
