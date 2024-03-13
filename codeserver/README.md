@@ -165,12 +165,10 @@ and create the `~/nginx/conf.d/example.com.conf` populated with the following.
 
 ```conf
 server {
-    listen          80;
-    server_name     example.com;
+    listen          80 default_server;
+    server_name     _;
 
-    location / {
-        proxy_pass      http://192.168.0.3:8080/; # 192.168.0.3 is the Workstation machine and 8080 is the port for code-server
-    }
+    return 301 https://$host$request_uri; # Redirect HTTP requests to HTTPS address
 }
 
 server {
