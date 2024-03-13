@@ -41,7 +41,12 @@ To do that, you can use the following line.
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ~/.config/code-server/MyKey.key -out ~/.config/code-server/MyCertificate.crt
 ```
 
-They can be used to tun the `code-server`.
+and add the following lines to  `~/.config/code-server/config.yaml`.
+
+```yaml
+cert: .config/code-server/MyCertificate.crt
+cert-key: .config/code-server/MyKey.key
+```
 
 ## Running Code Server
 
@@ -51,10 +56,27 @@ The following will start a Code Server session. I suggest also passing `--disabl
 code-server --disable-workspace-trust
 ```
 
-If you have generated the key and certificate files, the use the following command.
+### Running as a service
+
+You can run the Code Server as a service.
+
+You can enable the service to auto start during boot, or manually start and stop it on demand. Keep in mind that this service will not be enabled for all the users, only your user (you have to use `--user` argument).
 
 ```shell
-code-server --disable-workspace-trust --cert=.config/code-server/MyCertificate.crt --cert-key=.config/code-server/MyKey.key
+# Enable for boot
+systemctl --user enable code-server.service
+
+# Start on demand
+systemctl --user start code-server.service
+
+# Stop on demand
+systemctl --user stop code-server.service
+
+# Restart the service
+systemctl --user restart code-server.service
+
+# Check service status and logs
+systemctl --user status code-server.service
 ```
 
 ## Accessing Code Server through a local domain
