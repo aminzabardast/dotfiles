@@ -165,10 +165,10 @@ and create the `~/nginx/conf.d/example.com.conf` populated with the following.
 
 ```conf
 server {
-    listen          80 default_server;
-    server_name     _;
+    listen          80;
+    server_name     example.com;
 
-    return 301 https://$host$request_uri; # Redirect HTTP requests to HTTPS address
+    return 301 https://example.com$request_uri; # Redirect HTTP requests to HTTPS address
 }
 
 server {
