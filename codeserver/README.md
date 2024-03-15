@@ -93,7 +93,7 @@ Steps:
     ```shell
     systemctl enable --now dnsmasq.service
     ```
-3. Edit configuration.
+3. Edit configuration in `/etc/dnsmasq.conf`.
     ```conf
     # Add other name servers here.
     server=1.1.1.1
