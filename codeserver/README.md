@@ -88,7 +88,7 @@ One option for a local DNS is [`dnsmasq`](https://wiki.archlinux.org/title/dnsma
 Although it is possible to host the DNS domain on the same machine as the Code Server, we assume the DNS will be set up on a separate server (I personally use a Raspberry Pi 4).
 
 Steps:
-1. Install the `dnsmasq` (this depends on the OS).
+1. Install the `dnsmasq` and `bind`.
 2. Start Service.
     ```shell
     systemctl enable --now dnsmasq.service
