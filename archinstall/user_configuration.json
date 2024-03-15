@@ -2,7 +2,7 @@
     "hostname": "WorkstationComputer",
     "timezone": "Europe/Istanbul",
     "packages": [
-        "rxvt-unicode",
+        "rxvt-unicode", "alacritty", "zsh",
         "man-db", "texinfo", "man-pages",
         "base-devel", "openssh", "openssl", "zlib", "xz", "clang",
         "vim",
@@ -13,7 +13,6 @@
         "tmux", "lshw",
         "htop", "btop", "nvtop",
         "git",
-        "zsh",
         "picom", "xorg-xinit", "xorg", "mesa-utils", "arandr",
         "sxhkd", "dmenu", "neofetch", "wmname",  "reflector", "ttf-liberation",
         "rsync"
