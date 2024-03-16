@@ -150,7 +150,7 @@ Steps:
 Create the `~/nginx/docker-compose.yaml` and populate it with the following.
 
 ```yaml
-version: '3'
+version: '3.8'
 services:
   nginx:
     image: nginx:latest
