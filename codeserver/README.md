@@ -182,9 +182,9 @@ server {
     ssl_protocols           TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
 
     location / {
-	    allow                   all;
+        allow                   all;
         proxy_pass              https://192.168.0.3:8080/; # 192.168.0.3 is the Workstation machine and 8080 is the port for code-server
-	    proxy_http_version      1.1;
+        proxy_http_version      1.1;
         proxy_set_header        Host $host;
         proxy_set_header        Upgrade $http_upgrade;
         proxy_set_header        Connection upgrade;
