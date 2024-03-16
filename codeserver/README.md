@@ -159,6 +159,7 @@ services:
     ports:
       - 80:80
       - 443:443
+    restart: unless-stopped
 ```
 
 and create the `~/nginx/conf.d/example.com.conf` populated with the following.
