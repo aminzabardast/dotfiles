@@ -218,6 +218,11 @@ server {
 
     ssl_protocols           TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
 
+    gzip                on;
+    gzip_types          text/plain application/xml;
+    gzip_proxied        no-cache no-store private expired auth;
+    gzip_min_length     1000;
+
     location / {
         allow                   all;
         # If `nginx` is running on a separate server, then `proxy_pass` should be pointing to the Workstation machine and 8080 is the port for code-server
