@@ -1,6 +1,6 @@
 # Wetty - Terminal on Browser
 
-[Wetty]() is a minimal terminal emulator that runs on browsers. You can self-host this emulator using docker.
+[Wetty](https://github.com/butlerx/wetty) is a minimal terminal emulator that runs on browsers. You can self-host this emulator using docker.
 
 ## Why you may need this?
 
