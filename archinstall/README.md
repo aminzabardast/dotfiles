@@ -45,6 +45,37 @@ Steps:
 6. `mv personal .personal`
 7. Reboot.
 
+## Increase Swap Size
+
+To check different swaps, you can use the `swapon -s`. The _size_ is in Kibibyte (KiB = `1024^2` bytes).
+
+In a fresh installation, the OS will only use `zram`.
+
+To extend the swap strategy, you can add a `swapfile` of your own choosing size.
+
+Steps:
+1. Create File. The following creates a file with 4 GiBs (Gibibyte = `2^30` or `1024^3`). You can use GBs (Gigabyte = `10^9` or `1000^3`) as well. 
+    ```shell
+    sudo dd if=/dev/zero of=/swapfile bs=1GiB count=4 status=progress
+    ```
+2. Set the right permissions.
+    ```shell
+    chmod 0600 /swapfile
+    ```
+3. Format the file to swap.
+    ```shell
+    mkswap -U clear /swapfile
+    ```
+4. Activate the swap.
+    ```shell
+    swapon /swapfile
+    ```
+
+This will increase your swap for this session only. To make the swap activate in the boot, you need to change the `/etc/fstab` file. Take a backup of this file since messing this file up will be hard to recover from. Add the following to the file.
+```txt 
+/swapfile none swap defaults 0 0
+```
+
 ## Result
 
 This will install [Arch Linux](https://archlinux.org/), with [BSPWM](https://wiki.archlinux.org/title/bspwm), [DMenu](https://wiki.archlinux.org/title/dmenu), and [urxvt](https://wiki.archlinux.org/title/rxvt-unicode).
