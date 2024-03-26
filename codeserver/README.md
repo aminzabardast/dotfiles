@@ -86,7 +86,7 @@ Steps:
     ```conf
     127.0.0.1   example.com
     ```
-2. Install `bind` and test DNS request to `example.com`.
+2. Make sure that the `bind` is installed, then test DNS request to `example.com`.
     ```shell
     dig example.com
 
@@ -122,7 +122,7 @@ One option for a local DNS is [`dnsmasq`](https://wiki.archlinux.org/title/dnsma
 Although it is possible to host the DNS domain on the same machine as the Code Server, we assume the DNS will be set up on a separate server (I personally use a Raspberry Pi 4).
 
 Steps:
-1. Install the `dnsmasq` and `bind`.
+1. Make sure the `dnsmasq` and `bind` packages are installed.
 2. Start Service.
     ```shell
     systemctl enable --now dnsmasq.service

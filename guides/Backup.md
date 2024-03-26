@@ -3,11 +3,11 @@
 You can use [Timeshift](https://wiki.archlinux.org/title/Timeshift) as backup solution. Timeshift requires [cron](https://wiki.archlinux.org/title/cron) to scheduling.
 
 Steps:
-1. Install cron.
+1. Make sure that `cronie` is installed.
     ```shell
     paru -S cronie
     ```
-2. Initiate the cron service.
+2. Initiate the cron service if it is not initiated.
     ```shell
     systemctl enable --now cronie.service
     ```
