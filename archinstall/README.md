@@ -54,19 +54,23 @@ In a fresh installation, the OS will only use `zram`.
 To extend the swap strategy, you can add a `swapfile` of your own choosing size.
 
 Steps:
-1. Create File. The following creates a file with 4 GiBs (Gibibyte = `2^30` or `1024^3`). You can use GBs (Gigabyte = `10^9` or `1000^3`) as well. 
+1. All the necessary commands should be executed with a _sudoer_ user. I suggest becoming the _root user_.
     ```shell
-    sudo dd if=/dev/zero of=/swapfile bs=1GiB count=4 status=progress
+    sudo su
     ```
-2. Set the right permissions.
+2. Create File. The following creates a file with 4 GiBs (Gibibyte = `2^30` or `1024^3`). You can use GBs (Gigabyte = `10^9` or `1000^3`) as well.
+    ```shell
+    dd if=/dev/zero of=/swapfile bs=1GiB count=4 status=progress
+    ```
+3. Set the right permissions.
     ```shell
     chmod 0600 /swapfile
     ```
-3. Format the file to swap.
+4. Format the file to swap.
     ```shell
     mkswap -U clear /swapfile
     ```
-4. Activate the swap.
+5. Activate the swap.
     ```shell
     swapon /swapfile
     ```
