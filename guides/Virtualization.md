@@ -7,7 +7,8 @@
 
 Tips:
 - Make sure that you meet "For network connectivity" requirements in libvirt.
-- You need to start a default network in Virsh. Network will not work out of the box.
+- You need to start a default network in Virsh. Network may not work out of the box.
 - You have to assign yourself to `libvirt-qemu` and `libvirt` groups.
+- Remember to start the `libvirtd.service`.
 - House your iso files in `/var/lib/libvirt/images` directory. Give the ownership to `libvirt-qemu` user and group.
 - Add `/var/lib/libvirt` to be ignored by backup operations.
