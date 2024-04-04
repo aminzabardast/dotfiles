@@ -8,3 +8,4 @@
 - [Dedicated Nvidia GPU Driver](guides/Nvidia-GPU.md)
 - [Code Server Guides](codeserver/README.md)
 - [Terminal Emulator Guide](guides/WebTerminalEmulator.md)
+- [Virtualization Guide](guides/Virtualization.md)
