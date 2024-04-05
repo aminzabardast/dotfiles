@@ -9,3 +9,4 @@
 - [Code Server Guides](codeserver/README.md)
 - [Terminal Emulator Guide](guides/WebTerminalEmulator.md)
 - [Virtualization Guide](guides/Virtualization.md)
+- [Control Volume Level and Mute with Terminal](guides/AudioControlViaTerminal.md)
