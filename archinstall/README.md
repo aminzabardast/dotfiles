@@ -80,6 +80,10 @@ This will increase your swap for this session only. To make the swap activate in
 /swapfile none swap defaults 0 0
 ```
 
+## Remove Boot Loader Countdown
+
+As it is explained [here](https://wiki.archlinux.org/title/systemd-boot#Loader_configuration), you can remove the boot loader page coundown by editing the `/boot/loader/loader.conf ` and assigning zero to `timeout`.
+
 ## Result
 
 This will install [Arch Linux](https://archlinux.org/), with [BSPWM](https://wiki.archlinux.org/title/bspwm), [DMenu](https://wiki.archlinux.org/title/dmenu), and [urxvt](https://wiki.archlinux.org/title/rxvt-unicode).
