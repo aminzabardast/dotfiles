@@ -18,3 +18,5 @@ You can check the volume control by `pamixer --get-volume` or `pamixer --get-vol
 
 You can increase the volume by `pamixer -i <number>` where number is between 1 and 100. For example, if the volume level is 10, then `pamixer -i 40` will increase the volume to 50.
 Decreasing the volume works the same way, but you have to use the `-d` argument instead of `-i`.
+
+You can also set a ansolute level for the volume by `pamixer --set-volume <number>`. For example, `pamixer --set-volume 50` will set the volume level to 50% no matter the previous state. 
