@@ -17,7 +17,12 @@
     ```shell
     systemctl enable --now libvirtd.service
     ```
-4. Install [Virt-Manager](https://wiki.archlinux.org/title/Virt-manager#Installation)
+6. Make sure that the default network auto starts.
+    ```shell
+    sudo virsh net-start default
+    sudo virsh net-autostart default
+    ```
+7. Install [Virt-Manager](https://wiki.archlinux.org/title/Virt-manager#Installation) for GUI Access. You can also install Virt-Manager [via Homebrew](https://formulae.brew.sh/formula/virt-manager) for MacOS, then access your virtualizations via SSH.
 
 Tips:
 - House your iso files in `/var/lib/libvirt/images` directory. Give theie ownership to `libvirt-qemu` user and group.
