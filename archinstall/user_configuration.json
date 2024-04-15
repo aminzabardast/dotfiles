@@ -6,7 +6,7 @@
         "man-db", "texinfo", "man-pages",
         "base-devel", "openssh", "openssl", "zlib", "xz", "clang", "cronie",
         "vim",
-        "duf", "ncdu", "udisks2",
+        "duf", "ncdu", "udisks2", "mc",
         "zip", "unzip",
         "aria2", "wget" , "bind",
         "fzf",
