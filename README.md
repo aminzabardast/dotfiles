@@ -1,5 +1,7 @@
 # Dotfiles for a Linux Workstation
 
+## Table of Content
+
 - [Installation Using `archinstall`](archinstall/README.md)
 - [GUI Related Guides](guides/GuiRelated.md)
 - [Font Related Guides](guides/Fonts.md)
