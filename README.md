@@ -1,5 +1,15 @@
 # Dotfiles for a Linux Workstation
 
+This guide helps with setting up an ArchLinux based workstation.
+This includes guides for:
+- Installing base Arch Linux system.
+- Installing Docker and Docker Compose.
+- Installing and Setting up Code Server for remote development.
+- Helping to setup a backup software solution.
+- Setting up KVM/QEMU based virtualization infrustructure on the workstation machine.
+
+## Table of Content
+
 - [Installation Using `archinstall`](archinstall/README.md)
 - [GUI Related Guides](guides/GuiRelated.md)
 - [Font Related Guides](guides/Fonts.md)
