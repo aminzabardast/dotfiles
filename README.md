@@ -20,3 +20,4 @@ This includes guides for:
 - [Terminal Emulator Guide](guides/WebTerminalEmulator.md)
 - [Virtualization Guide](guides/Virtualization.md)
 - [Control Volume Level and Mute with Terminal](guides/AudioControlViaTerminal.md)
+- [Optical Disk Backup Infrastructure](guides/K3b.md)
