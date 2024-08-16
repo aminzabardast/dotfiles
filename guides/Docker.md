@@ -1,4 +1,6 @@
-# Installing Docker
+# Docker
+
+## Installation
 
 Installing Docker, and Docker Compose on ArchLinux is easy.
 
@@ -22,7 +24,7 @@ sudo usermod -aG docker <username>
 
 You need to reboot for the group modification to take effect.
 
-# Testing
+## Testing
 
 Create the following file `test_docker/docker-compose.yaml` and add the following to it.
 
