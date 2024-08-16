@@ -3,10 +3,12 @@
 [Code Server](https://github.com/coder/code-server) is a solution to remote development on a browser.
 
 Code Server has some [perks](https://github.com/coder/code-server#highlights) over using a local IDE:
+
 - Consistant development on multiple devices.
 - Preserve battery on device by not running heavy processes on device.
 
 There are also some shortcomings:
+
 - Internet connection is always necessary for development, since the development environment is running on a machine in another location.
 
 ## Installation
@@ -82,11 +84,15 @@ systemctl --user status code-server.service
 ## Accessing Code Server Through a Domain (only local machine)
 
 Steps:
+
 1. Edit local DNS configuration in `/etc/hosts`.
+
     ```conf
     127.0.0.1   example.com
     ```
+
 2. Make sure that the `bind` is installed, then test DNS request to `example.com`.
+
     ```shell
     dig example.com
 
@@ -122,12 +128,17 @@ One option for a local DNS is [`dnsmasq`](https://wiki.archlinux.org/title/dnsma
 Although it is possible to host the DNS domain on the same machine as the Code Server, we assume the DNS will be set up on a separate server (I personally use a Raspberry Pi 4).
 
 Steps:
+
 1. Make sure the `dnsmasq` and `bind` packages are installed.
+
 2. Start Service.
+
     ```shell
     systemctl enable --now dnsmasq.service
     ```
+
 3. Edit configuration in `/etc/dnsmasq.conf`.
+
     ```conf
     # Add other name servers here.
     server=1.1.1.1
@@ -141,13 +152,17 @@ Steps:
     interface=eth0
     interface=wlan0
     ```
+
 4. Syntax check.
+
     ```shell
     systemctl restart dnsmasq.service
     dnsmaq --test
     # The response should be: > syntax check OK.
     ```
+
 5. Test DNS request to domains using local DNS (127.0.0.1) and cloudflare DNS (1.1.1.1).
+
     ```shell
     dig example.com @127.0.0.1
 
@@ -171,6 +186,7 @@ Steps:
 
     # ...
     ```
+
 6. Set DNS to local DNS by changing it to the IP of the DNS machine (either manually or by setting the local DNS on the router).
 
 After this, you can access the Code Server by going to `https://example.com:8079`.
@@ -245,4 +261,5 @@ docker-compose up -d
 ```
 
 Note that:
+
 - The 80 and 443 ports should be open and accessible on all devices (Workstation and DNS Server).
