@@ -3,7 +3,7 @@
 ## What is K3b?
 
 **K3b** (from KDE Burn Baby Burn) is a CD, DVD and Blu-ray authoring application by KDE for Unix-like computer operating systems.
-The actual disc recording in K3b is done by the command line utilities `cdrecord` or `cdrkit`, `cdrdao`, and `growisofs`. 
+The actual disc recording in K3b is done by the command line utilities `cdrecord` or `cdrkit`, `cdrdao`, and `growisofs`.
 
 ## Installation
 
