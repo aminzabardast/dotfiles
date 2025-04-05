@@ -228,7 +228,7 @@ server {
     listen          443 ssl;
     server_name     example.com;
 
-    # These needs to be the files you generated. You have to move the if the WS machine and DNS/nginx machine are not the same.
+    # These need to be the files you generated. You have to move them if the WS machine and DNS/nginx machine are not the same.
     ssl_certificate         /etc/nginx/conf.d/example.com.crt;
     ssl_certificate_key     /etc/nginx/conf.d/example.com.key;
 
