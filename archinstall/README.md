@@ -82,7 +82,7 @@ This will increase your swap for this session only. To make the swap activate in
 
 ## Remove Boot Loader Countdown
 
-As it is explained [here](https://wiki.archlinux.org/title/systemd-boot#Loader_configuration), you can remove the boot loader page coundown by editing the `/boot/loader/loader.conf ` and assigning zero to `timeout`.
+As it is explained [here](https://wiki.archlinux.org/title/systemd-boot#Loader_configuration), you can remove the boot loader page countdown by editing the `/boot/loader/loader.conf ` and assigning zero to `timeout`.
 
 ## Result
 

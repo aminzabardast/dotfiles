@@ -6,7 +6,7 @@ This includes guides for:
 - Installing Docker and Docker Compose.
 - Installing and Setting up Code Server for remote development.
 - Helping to setup a backup software solution.
-- Setting up KVM/QEMU based virtualization infrustructure on the workstation machine.
+- Setting up KVM/QEMU based virtualization infrastructure on the workstation machine.
 
 ## Table of Content
 

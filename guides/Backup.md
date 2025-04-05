@@ -28,7 +28,7 @@ Steps:
     sudo timeshift --check
     ```
 
-5. Edit the `timeshift` config file (`/etc/timeshift/timeshift.json`) and modify it based on your perferences.
+5. Edit the `timeshift` config file (`/etc/timeshift/timeshift.json`) and modify it based on your preferences.
     - I enable hourly and monthly backups.
     - I only keep one monthly and two daily backups.
     - I add some more location to be ignored by `timeshift`

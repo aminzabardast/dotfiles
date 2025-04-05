@@ -37,7 +37,7 @@
 
 Tips:
 
-- House your iso files in `/var/lib/libvirt/images` directory. Give theie ownership to `libvirt-qemu` user and group.
+- House your iso files in `/var/lib/libvirt/images` directory. Give the ownership to `libvirt-qemu` user and group.
 
     ```shell
     sudo chown -R libvirt-qemu:libvirt-qemu <filename>

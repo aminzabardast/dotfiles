@@ -69,5 +69,5 @@ hello_world-1 exited with code 0
 You can run the following to remove all the traces of this test image.
 
 ```shell
-doocker-compose down --rmi all
+docker-compose down --rmi all
 ```
