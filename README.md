@@ -4,13 +4,13 @@ This guide helps with setting up an ArchLinux based workstation.
 This includes guides for:
 - Installing base Arch Linux system.
 - Installing Docker and Docker Compose.
-- Installing and Setting up Code Server for remote development.
 - Helping to setup a backup software solution.
 - Setting up KVM/QEMU based virtualization infrastructure on the workstation machine.
 
 ## Table of Content
 
 - [Installation Using `archinstall`](archinstall/README.md)
+- [Gnome with X11 (for gaming on linux)](guides/GnomeWithX11.md)
 - [GUI Related Guides](guides/GuiRelated.md)
 - [Font Related Guides](guides/Fonts.md)
 - [Docker and Docker Compose Guide](guides/Docker.md)
