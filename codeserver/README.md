@@ -4,7 +4,7 @@
 
 Code Server has some [perks](https://github.com/coder/code-server#highlights) over using a local IDE:
 
-- Consistant development on multiple devices.
+- consistent development on multiple devices.
 - Preserve battery on device by not running heavy processes on device.
 
 There are also some shortcomings:
@@ -17,7 +17,7 @@ Code Server can be easily installed on Arch Linux [through AUR](https://aur.arch
 
 ## Password Protection
 
-The Code Server should be password protector. Edit `~/.config/code-server/config.yaml` and modele it after the following.
+The Code Server should be password protector. Edit `~/.config/code-server/config.yaml` and model it after the following.
 
 ```yaml
 bind-addr: 0.0.0.0:<PORT>
@@ -157,7 +157,7 @@ Steps:
 
     ```shell
     systemctl restart dnsmasq.service
-    dnsmaq --test
+    dnsmasq --test
     # The response should be: > syntax check OK.
     ```
 
@@ -228,7 +228,7 @@ server {
     listen          443 ssl;
     server_name     example.com;
 
-    # These needs to be hthe files you generated. You have to move the if the WS machine and DNS/nginx machine are not the same.
+    # These needs to be the files you generated. You have to move the if the WS machine and DNS/nginx machine are not the same.
     ssl_certificate         /etc/nginx/conf.d/example.com.crt;
     ssl_certificate_key     /etc/nginx/conf.d/example.com.key;
 
