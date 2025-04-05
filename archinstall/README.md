@@ -1,27 +1,77 @@
 # Installing Arch Linux
 
+This is based on [**ArchInstall**](https://wiki.archlinux.org/title/Archinstall) version `3.0.4`.
+
 ## Steps
 
 1. Download [Arch Linux's ISO File](https://archlinux.org/download/) and make a bootable drive (or pass the ISO to virtualization medium).
-2. Boot into installation environment.
-3. Load `user_configuration.json` into a file (for example `uc.json`).
-    ```shell
-    curl -L aminzabardast.github.io/dotfiles/archinstall/user_configuration.json > uc.json
-    ```
-    1. If using a Virtual Machine (VM), uncomment related lines in `user_configuration.json`.
-4. Run the installer: `archinstall --conf <config_file>`.
-5. Provide a *Disk Configuration*. `Disk Configuration > Use a best-effort default partition layout > Select devices > ext4 type`.
-6. Create a `sudoer` *User*.
-    1. Make sure to replace the username in the file (`custom-commands` section) with the *User* you created.
-7. Reboot after installation is done.
+1. Boot into installation environment.
+1. Make sure there is internet connection.
+    - Ping Google: `ping google.com`
+    - If necessary, connect to WiFi using `iwctl`.
+1. Run the installer: `archinstall`.
+1. Select the region appropriate *Mirrors and repositories*. You can search within the list by using `/` key.
+1. Provide a *Disk Configuration*. I suggest using the `best-effort` with `ext4` type.
+1. Change the *hostname* if necessary.
+1. Set *Root password*.
+1. Create at least a `sudoer` user in the *user account* section.
+1. Select appropriate *Profile*.
+    - I use `Desktop Gnome` with *Nvidia* drivers and use `dgm` as greeter.
+1. Use `pipewire` as audio.
+1. If you are on a laptop or need to use the WiFi, make sure the network configs are set to *Network Manager*.
+    - I find the default `systemd-networkd` faster so I just select *Copy ISO network settings*. But I use a Desktop with a wired connection.
+1. Additional packages. You can search within the list by using `/` key.
+    - I choose the following for Gnome:
+        - `zsh`
+        - `clang`
+        - `cronie`
+        - `duf`
+        - `ncdu`
+        - `zip`
+        - `mc`
+        - `aria2`
+        - `fzf`
+        - `tmux`
+        - `btop`
+        - `nvtop`
+        - `git`
+        - `neofetch`
+        - `rsync`
+        - `lshw`
+    - The following may ro may not be installed depending on my Profile choice.
+        - `unzip`
+        - `zlib`
+        - `xz`
+        - `vim`
+        - `udisks2`
+        - `wget`
+        - `htop`
+        - `bind`
+1. Select the correct timezone. You can search within the list by using `/` key.
+1. Reboot after installation is done.
 
 ## [Paru](https://github.com/Morganamilo/paru) as Package Manager
 
-*Paru* is already pulled to `/opt/paru` via `user_configuration.json`.
+Pull the *Paru* to `/opt/paru` the following.
 
-Follow these steps:
-1. Go to `/opt/paru`.
-2. Make and install `makepkg -si`.
+```shell
+sudo git clone https://aur.archlinux.org/paru.git /opt/paru
+sudo chown -R <USER>:<USER> /opt/paru
+```
+
+run the following before build:
+
+```shell
+sudo sed -i 's/#MAKEFLAGS/MAKEFLAGS/g' /etc/makepkg.conf
+sudo sed -i 's/-j2/-j$(nproc)/g' /etc/makepkg.conf
+```
+
+then build
+
+```shell
+cd /opt/paru
+makepkg -si
+```
 
 ## Disable SSH with Password
 
@@ -35,15 +85,19 @@ Having SSH with password is not as secure. The following steps are for disabling
 
 ## ZSH and OMZ
 
-`ZSH` is already installed. You need to set `zsh` as the main shell and setup `oh-my-zsh`.
+Make sure `ZSH` is already installed.
 
-Steps:
-1. `cd` to home directory.
-2. `sh omz.sh`
-4. `mv zshrc .zshrc`
-5. `mv zprofile .zprofile`
-6. `mv personal .personal`
-7. Reboot.
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Then I load my personal configs.
+
+```shell
+curl -L https://aminzabardast.github.io/dotfiles/zsh/zshrc > /home/amin/.zshrc
+curl -L https://aminzabardast.github.io/dotfiles/zsh/zprofile > /home/amin/.zprofile
+curl -L https://aminzabardast.github.io/dotfiles/zsh/personal > /home/amin/.personal
+```
 
 ## Increase Swap Size
 
@@ -84,6 +138,10 @@ This will increase your swap for this session only. To make the swap activate in
 
 As it is explained [here](https://wiki.archlinux.org/title/systemd-boot#Loader_configuration), you can remove the boot loader page countdown by editing the `/boot/loader/loader.conf ` and assigning zero to `timeout`.
 
-## Result
+## Running Certain Services
 
-This will install [Arch Linux](https://archlinux.org/), with [BSPWM](https://wiki.archlinux.org/title/bspwm), [DMenu](https://wiki.archlinux.org/title/dmenu), and [urxvt](https://wiki.archlinux.org/title/rxvt-unicode).
+Some services may not be active from the beginning. Activate them.
+
+- `systemctl enable --now cronie.service`
+- `systemctl enable --now sshd.service`
+- `systemctl enable --now bluetooth.service`

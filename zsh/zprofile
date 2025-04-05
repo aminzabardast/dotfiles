@@ -1,6 +1,14 @@
-# SSH Stuff
+# SSH Stuff 
+# https://stackoverflow.com/questions/18880024/start-ssh-agent-on-login
 SSH_ENV="$HOME/.ssh/agent-environment"
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+# Wait up to 2 seconds for the socket to appear
+for i in {1..10}; do
+  if [ -S "$XDG_RUNTIME_DIR/ssh-agent.socket" ]; then
+    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+    break
+  fi
+  sleep 0.2
+done
 
 # Adding $HOME/.local/bin to $PATH
 export PATH="$HOME/.local/bin:$PATH"
