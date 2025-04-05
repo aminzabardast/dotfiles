@@ -81,7 +81,9 @@ Having SSH with password is not as secure. The following steps are for disabling
 2. Restart the `sshd` service:
     ```shell
     systemctl restart sshd
-    ``` 
+    ```
+
+Also, check [this file](ssh-agent/README.md) for more information about running SSH agent on boot.
 
 ## ZSH and OMZ
 
