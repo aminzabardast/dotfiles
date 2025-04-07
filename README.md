@@ -21,3 +21,4 @@ This includes guides for:
 - [Virtualization Guide](guides/Virtualization.md)
 - [Control Volume Level and Mute with Terminal](guides/AudioControlViaTerminal.md)
 - [Optical Disk Backup Infrastructure](guides/K3b.md)
+- [Wake and Sleep on LAN](guides/WakeAndSleepOnLAN.md)
