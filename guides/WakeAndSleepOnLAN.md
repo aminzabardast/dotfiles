@@ -31,3 +31,29 @@ First and for most, WoL should be supported by the Motherboard.
       ```bash
       @reboot /usr/bin/ethtool -s <interface> wol g
       ```
+
+## Sleep on LAN (SoL)
+
+This is not something that is supported by Motherboards. However, there is a project that aims to achieve this.
+
+<https://github.com/SR-G/sleep-on-lan>
+
+1. Make sure SoL is installed.
+2. Execute `sleep-on-lan` on terminal. It will tell you where the config (`sol.json`) should be.
+3. The content of `sol.json` should be:
+    ```
+    {
+        "Listeners": [
+            "UDP:9"
+        ],
+        "LogLevel": "INFO",
+        "Commands": [
+            {
+                "Operation": "shutdown",
+                "Command": "poweroff",
+                "Default": true
+            }
+        ]
+    }
+    ```
+4. Install [GPTWOL](https://github.com/Misterbabou/gptwol) on RPi to be able to wake your PC remotely. I map the *GPTWOL* interface to a local domain (using *dnsmasq* and *nginx*) to have easy access.
