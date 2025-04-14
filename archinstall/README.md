@@ -47,6 +47,10 @@ This is based on [**ArchInstall**](https://wiki.archlinux.org/title/Archinstall)
         - `wget`
         - `htop`
         - `bind`
+    - Command to install all of them:
+        ```shell
+        sudo pacman -S zsh clang cronie duf ncdu zip mc aria2 fzf tmux btop nvtop git neofetch rsync lshw unzip zlib xz vim udisk2 wget htop bind
+        ```
 1. Select the correct timezone. You can search within the list by using `/` key.
 1. Reboot after installation is done.
 
