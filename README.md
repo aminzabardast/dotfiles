@@ -11,6 +11,7 @@ This includes guides for:
 
 - [Installation Using `archinstall`](archinstall/README.md)
 - [Gnome with X11 (for gaming on linux)](guides/GnomeWithX11.md)
+- [CalDAV and iCloud on Gnome](guides/CalDAVwithIcloudForGnome.md)
 - [GUI Related Guides](guides/GuiRelated.md)
 - [Font Related Guides](guides/Fonts.md)
 - [Docker and Docker Compose Guide](guides/Docker.md)
