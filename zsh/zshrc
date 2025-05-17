@@ -6,6 +6,7 @@ plugins=(
   git
   docker
   fzf
+  direnv
 )
 export EDITOR=vim
 source $ZSH/oh-my-zsh.sh

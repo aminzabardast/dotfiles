@@ -31,6 +31,7 @@ This is based on [**ArchInstall**](https://wiki.archlinux.org/title/Archinstall)
         - `mc`
         - `aria2`
         - `fzf`
+        - `direnv`
         - `tmux`
         - `btop`
         - `nvtop`
