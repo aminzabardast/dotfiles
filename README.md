@@ -23,3 +23,5 @@ This includes guides for:
 - [Control Volume Level and Mute with Terminal](guides/AudioControlViaTerminal.md)
 - [Optical Disk Backup Infrastructure](guides/K3b.md)
 - [Wake and Sleep on LAN](guides/WakeAndSleepOnLAN.md)
+- [Dual Boot with Windows](guides/DualBootWithWindows.md)
+
