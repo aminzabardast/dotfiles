@@ -8,7 +8,7 @@ sudo pacman -S wireguard-tools
 
 ## Trouble Shooting
 
-There is an issue related to DNS resolution when using `wg-quick` when using `systemd-resolved`. To fix this, you need to create a simbolic link to the `resolv.conf` file used by `systemd-resolved`. Run the following command:
+There is an issue related to DNS resolution when using `wg-quick` when using `systemd-resolved`. To fix this, you need to create a symbolic link to the `resolv.conf` file used by `systemd-resolved`. Run the following command:
 
 ```bash
 sudo ln -s /usr/bin/resolvectl /usr/local/bin/resolvconf
