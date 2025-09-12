@@ -24,4 +24,5 @@ This includes guides for:
 - [Optical Disk Backup Infrastructure](guides/K3b.md)
 - [Wake and Sleep on LAN](guides/WakeAndSleepOnLAN.md)
 - [Dual Boot with Windows](guides/DualBootWithWindows.md)
+- [WireGuard Client Guide](guides/WireGuardClient.md)
 
