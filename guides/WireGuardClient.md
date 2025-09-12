@@ -6,7 +6,7 @@ I use `wg-quick` to manage my Wireguard connections. It is a simple and easy-to-
 sudo pacman -S wireguard-tools
 ```
 
-## Trouble Shooting
+## Troubleshooting
 
 There is an issue related to DNS resolution when using `wg-quick` when using `systemd-resolved`. To fix this, you need to create a symbolic link to the `resolv.conf` file used by `systemd-resolved`. Run the following command:
 
