@@ -1,6 +1,6 @@
 # WireGuard Client
 
-I use `wg-quick` to manage my Wireguard connections. It is a simple and easy-to-use tool. To install it, run the following command:
+I use `wg-quick` to manage my WireGuard connections. It is a simple and easy-to-use tool. To install it, run the following command:
 
 ```bash
 sudo pacman -S wireguard-tools
