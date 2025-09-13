@@ -22,7 +22,7 @@ Or alternatively, install a specific Nerd Font you want, for example, Roboto Mon
 paru -S ttf-roboto-mono-nerd
 ```
 
-### Nerdfornts in Alacritty
+### Nerd Fonts in Alacritty
 
 Add the following lines to your `~/.config/alacritty/alacritty.toml` file to set a Nerd Font as the default font in Alacritty.
 
