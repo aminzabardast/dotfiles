@@ -78,7 +78,7 @@ cd /opt/paru
 makepkg -si
 ```
 
-## Disable SSH with Password
+## Disable Accepting SSH Connection with Password
 
 Having SSH with password is not as secure. The following steps are for disabling the password authentication.
 
@@ -88,7 +88,11 @@ Having SSH with password is not as secure. The following steps are for disabling
     systemctl restart sshd
     ```
 
-Also, check [this file](ssh-agent/README.md) for more information about running SSH agent on boot.
+### SSH Keys |Agent
+
+Check [this file](ssh-agent/README.md) for more information about running SSH agent on boot.
+
+This solution is for when you want to load your SSH keys for connecting to remote servers or git repositories.
 
 ## ZSH and OMZ
 
