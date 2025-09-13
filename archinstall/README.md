@@ -88,7 +88,7 @@ Having SSH with password is not as secure. The following steps are for disabling
     systemctl restart sshd
     ```
 
-### SSH Keys |Agent
+### SSH Key Agent
 
 Check [this file](ssh-agent/README.md) for more information about running SSH agent on boot.
 
