@@ -16,7 +16,7 @@ Install [`nerd-fonts` group](https://archlinux.org/groups/x86_64/nerd-fonts/) fr
 paru -S nerd-fonts
 ```
 
-### Nerdfornts in Alacritty
+### Nerd Fonts in Alacritty
 
 Add the following lines to your `~/.config/alacritty/alacritty.toml` file to set a Nerd Font as the default font in Alacritty.
 
