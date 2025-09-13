@@ -78,7 +78,7 @@ cd /opt/paru
 makepkg -si
 ```
 
-## Disable Accepting SSH Connection with Password
+## Disable SSH Password Authentication
 
 Having SSH with password is not as secure. The following steps are for disabling the password authentication.
 
